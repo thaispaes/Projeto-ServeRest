@@ -1,48 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-23T11:01:25.702891" rpa="false" schemaversion="5">
-<suite id="s1" name="Singup" source="d:\codigos\GitHub\Projeto-ServeRest\tests\singup.robot">
-<test id="s1-t1" name="Deve exibir o slogan na SignUp Page" line="8">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-23T11:28:49.201250" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="d:\codigos\GitHub\Projeto-ServeRest\tests\signup.robot">
+<test id="s1-t1" name="Deve iniciar o login do cliente" line="8">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-07-23T11:01:25.909154" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\85be4cf7-202d-4060-8d61-32e3ae913972"}</msg>
-<msg time="2025-07-23T11:01:25.941341" level="INFO">Starting Browser process C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53111</msg>
-<msg time="2025-07-23T11:01:27.242907" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\85be4cf7-202d-4060-8d61-32e3ae913972"}</msg>
+<msg time="2025-07-23T11:28:49.408369" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\d446911d-cf82-4a63-a271-48c29932ce0b"}</msg>
+<msg time="2025-07-23T11:28:49.433497" level="INFO">Starting Browser process C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54527</msg>
+<msg time="2025-07-23T11:28:51.521630" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\d446911d-cf82-4a63-a271-48c29932ce0b"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-07-23T11:01:25.906740" elapsed="1.336906"/>
+<status status="PASS" start="2025-07-23T11:28:49.407111" elapsed="2.115108"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-07-23T11:01:29.677496" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
-<msg time="2025-07-23T11:01:29.677805" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-07-23T11:28:56.107133" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-07-23T11:28:56.107442" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://front.serverest.dev/login</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-07-23T11:01:27.244752" elapsed="2.433318"/>
+<status status="PASS" start="2025-07-23T11:28:51.524495" elapsed="4.583196"/>
 </kw>
-<kw name="Get Element" owner="Browser">
-<msg time="2025-07-23T11:01:29.715274" level="INFO">Locator found successfully.</msg>
-<arg>css=.imagem</arg>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-23T11:28:56.155675" level="INFO">Text: 'Login'</msg>
+<arg>css=h1.font-robot</arg>
+<arg>equal</arg>
+<arg>Login</arg>
+<tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<status status="PASS" start="2025-07-23T11:01:29.678657" elapsed="0.036990"/>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-23T11:28:56.108252" elapsed="0.047728"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-23T11:28:56.157324" level="INFO">Fills the text 'thaisregina1901@gmail.com' in the given field.</msg>
+<arg>id=email</arg>
+<arg>thaisregina1901@gmail.com</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-23T11:28:56.156477" elapsed="0.058591"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-07-23T11:28:56.216802" level="INFO">Fills the text 'Thais123' in the given field.</msg>
+<arg>id=password</arg>
+<arg>Thais123</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-23T11:28:56.215708" elapsed="0.014053"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-07-23T11:01:34.716940" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2025-07-23T11:29:06.231011" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-07-23T11:01:29.716212" elapsed="5.001062"/>
+<status status="PASS" start="2025-07-23T11:28:56.230265" elapsed="10.001159"/>
 </kw>
-<msg time="2025-07-23T11:01:34.743140" level="INFO">Switching context to context=e526a1ca-3d12-428a-90b6-f5a1365ce199 in CURRENT</msg>
-<msg time="2025-07-23T11:01:34.764448" level="INFO">Successfully changed active context: context=e526a1ca-3d12-428a-90b6-f5a1365ce199</msg>
-<msg time="2025-07-23T11:01:34.813027" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-07-23T11:01:25.905042" elapsed="8.812799"/>
+<msg time="2025-07-23T11:29:06.250899" level="INFO">Switching context to context=ac2636c1-4643-4de8-a6e8-2270722624a8 in CURRENT</msg>
+<msg time="2025-07-23T11:29:06.266361" level="INFO">Successfully changed active context: context=ac2636c1-4643-4de8-a6e8-2270722624a8</msg>
+<msg time="2025-07-23T11:29:06.304069" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-07-23T11:28:49.405257" elapsed="16.826820"/>
 </test>
-<doc>Teste para acessar a tela inicial da ServeRest no WebApp</doc>
-<status status="PASS" start="2025-07-23T11:01:25.708089" elapsed="9.108766"/>
+<doc>Teste para acessar a tela inicial da ServeRest no WebApp e validar o slogan</doc>
+<status status="PASS" start="2025-07-23T11:28:49.207403" elapsed="17.098577"/>
 </suite>
 <statistics>
 <total>
@@ -51,7 +72,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Singup" id="s1" pass="1" fail="0" skip="0">Singup</stat>
+<stat name="Signup" id="s1" pass="1" fail="0" skip="0">Signup</stat>
 </suite>
 </statistics>
 <errors>

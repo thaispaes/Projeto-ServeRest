@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation        Teste para acessar a tela inicial da ServeRest no WebApp
+Documentation        Teste para acessar a tela inicial da ServeRest no WebApp e validar o slogan
 
 Library        Browser
 

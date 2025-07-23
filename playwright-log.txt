@@ -1,0 +1,34 @@
+{"level":30,"time":"2025-07-23T14:01:26.647Z","pid":24256,"hostname":"ThaisPaes","msg":"Listening on 127.0.0.1:53111"}
+(node:24256) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-07-23T14:01:27.029Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-07-23T14:01:27.238Z","pid":24256,"hostname":"ThaisPaes","msg":"Adding browser to stack: chromium, version: 138.0.7204.23"}
+{"level":30,"time":"2025-07-23T14:01:27.240Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-07-23T14:01:27.239Z","pid":24256,"hostname":"ThaisPaes","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-07-23T14:01:27.249Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-07-23T14:01:27.249Z","pid":24256,"hostname":"ThaisPaes","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-07-23T14:01:27.270Z","pid":24256,"hostname":"ThaisPaes","msg":"Changed active context"}
+{"level":30,"time":"2025-07-23T14:01:27.426Z","pid":24256,"hostname":"ThaisPaes","msg":"Video path: undefined"}
+{"level":30,"time":"2025-07-23T14:01:27.426Z","pid":24256,"hostname":"ThaisPaes","msg":"Changed active page"}
+{"level":30,"time":"2025-07-23T14:01:29.675Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method newPage"}
+{"level":30,"time":"2025-07-23T14:01:29.682Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getElement"}
+{"level":30,"time":"2025-07-23T14:01:29.682Z","pid":24256,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=.imagem in page."}
+{"level":30,"time":"2025-07-23T14:01:29.713Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getElement"}
+{"level":30,"time":"2025-07-23T14:01:34.726Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.729Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.732Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.734Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.737Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.739Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.746Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.749Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.759Z","pid":24256,"hostname":"ThaisPaes","msg":"Changed active context"}
+{"level":30,"time":"2025-07-23T14:01:34.759Z","pid":24256,"hostname":"ThaisPaes","msg":"Changing current active page: page=3ae02bac-7b48-42c4-938f-d6835dc987a8"}
+{"level":30,"time":"2025-07-23T14:01:34.759Z","pid":24256,"hostname":"ThaisPaes","msg":"Changed active page"}
+{"level":30,"time":"2025-07-23T14:01:34.764Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-07-23T14:01:34.779Z","pid":24256,"hostname":"ThaisPaes","msg":"Removed page=e10e7036-627e-4f0f-881a-f968dd2f8455 from context=e526a1ca-3d12-428a-90b6-f5a1365ce199 page stack"}
+{"level":30,"time":"2025-07-23T14:01:34.811Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-07-23T14:01:34.822Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:34.822Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-23T14:01:36.993Z","pid":24256,"hostname":"ThaisPaes","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-07-23T14:01:37.130Z","pid":24256,"hostname":"ThaisPaes","msg":"End of node method closeAllBrowsers"}

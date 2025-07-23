@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-23T11:01:25.702891" rpa="false" schemaversion="5">
+<suite id="s1" name="Singup" source="d:\codigos\GitHub\Projeto-ServeRest\tests\singup.robot">
+<test id="s1-t1" name="Deve exibir o slogan na SignUp Page" line="8">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-23T11:01:25.909154" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\85be4cf7-202d-4060-8d61-32e3ae913972"}</msg>
+<msg time="2025-07-23T11:01:25.941341" level="INFO">Starting Browser process C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53111</msg>
+<msg time="2025-07-23T11:01:27.242907" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\85be4cf7-202d-4060-8d61-32e3ae913972"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-23T11:01:25.906740" elapsed="1.336906"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-23T11:01:29.677496" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-07-23T11:01:29.677805" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://front.serverest.dev/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-23T11:01:27.244752" elapsed="2.433318"/>
+</kw>
+<kw name="Get Element" owner="Browser">
+<msg time="2025-07-23T11:01:29.715274" level="INFO">Locator found successfully.</msg>
+<arg>css=.imagem</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
+<status status="PASS" start="2025-07-23T11:01:29.678657" elapsed="0.036990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-23T11:01:34.716940" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-23T11:01:29.716212" elapsed="5.001062"/>
+</kw>
+<msg time="2025-07-23T11:01:34.743140" level="INFO">Switching context to context=e526a1ca-3d12-428a-90b6-f5a1365ce199 in CURRENT</msg>
+<msg time="2025-07-23T11:01:34.764448" level="INFO">Successfully changed active context: context=e526a1ca-3d12-428a-90b6-f5a1365ce199</msg>
+<msg time="2025-07-23T11:01:34.813027" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-07-23T11:01:25.905042" elapsed="8.812799"/>
+</test>
+<doc>Teste para acessar a tela inicial da ServeRest no WebApp</doc>
+<status status="PASS" start="2025-07-23T11:01:25.708089" elapsed="9.108766"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Singup" id="s1" pass="1" fail="0" skip="0">Singup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

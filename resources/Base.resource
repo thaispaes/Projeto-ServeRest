@@ -3,8 +3,8 @@ Documentation        Arquivo principal das keywords bases do projeto
 
 Library        Browser
 
-Resource        pages/Singup.resource
-
+Resource        pages/Login.resource
+Resource        pages/Store.resource
 
 *** Keywords ***
 Start session 

@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation        Acoes e elementos da SignUp Page
+Documentation        Acoes e elementos da Login Page
 
 Library        Browser
 
 *** Keywords ***
-Realizar login na aplicacao
+SignIn
     [Arguments]        ${account}  
     Get Text        css=h1.font-robot    equal     Login
 
@@ -13,9 +13,9 @@ Realizar login na aplicacao
 
     Click           css=button >> text=Entrar
 
-    Sleep    10
+    Sleep    5
 
-Validar alerta de campo vazio
+SignIn validation
     [Arguments]        ${alerta}
 
     Wait For Elements State    

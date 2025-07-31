@@ -3,11 +3,11 @@ Documentation        Arquivo principal das keywords bases do projeto
 
 Library        Browser
 
-Resource        pages/Login.resource
+Resource        pages/SignIn.resource
 Resource        pages/Store.resource
 Resource        pages/SignUp.resource
 
 *** Keywords ***
 Start session 
     New Browser     browser=chromium    headless=False
-    New Page        https://front.serverest.dev/login
+    New Page        https://front.serverest.dev/login    wait_until=domcontentloaded

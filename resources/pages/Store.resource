@@ -4,5 +4,5 @@ Documentation        Acoes e elementos da Store Page
 Library        Browser
 
 *** Keywords ***
-Login with success
+Validate entry with success
     Get Text    css=h1    equals    Serverest Store

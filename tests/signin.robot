@@ -16,9 +16,8 @@ SignIn with success in WebApp
     ...        email=thaisregina1901@gmail.com
     ...        password=Thais123
     
-
-   SignIn    ${account}
-   Login with success    
+    SignIn    ${account}
+    Validate entry with success
 
 
 # Deve negar acesso devido ao email vazio
@@ -30,13 +29,21 @@ SignIn with success in WebApp
 #    SignIn validation        Email é obrigatório    
 
 #Uso de template de testes
-Login validations
+Login input validations
     [Template]    Attempt signin
     ${EMPTY}                     Thais123    Email é obrigatório
     thaisregina1901@gmail.com    ${EMPTY}    Password não pode ficar em branco
     thais@gmail.com              Thais123    Email e/ou senha inválidos
     thais@gmail.com              123         Email e/ou senha inválidos
     thaisregina1901@gmail.com    123         Email e/ou senha inválidos
+
+SignIn with an admin access
+    ${account}        Create Dictionary
+    ...        email=thaisregina1901@gmail.com
+    ...        password=Thais123
+    
+    SignIn    ${account}
+    Validate entry with success
 
 *** Keywords ***
 Attempt signin 

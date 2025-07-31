@@ -23,3 +23,6 @@ SignIn validation
     ...    visible     5
     
     Get Text    css=div .alert > span    equals    ${alerta}
+
+Go to signUp page
+    Click    css=a.btn >> text=Cadastre-se

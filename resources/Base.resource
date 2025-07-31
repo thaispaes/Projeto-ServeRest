@@ -5,6 +5,7 @@ Library        Browser
 
 Resource        pages/Login.resource
 Resource        pages/Store.resource
+Resource        pages/SignUp.resource
 
 *** Keywords ***
 Start session 

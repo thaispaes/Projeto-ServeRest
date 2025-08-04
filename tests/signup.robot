@@ -6,7 +6,7 @@ Resource    signin.robot
 
 Library        FakerLibrary
 
-Suite Setup    Gerar Dados Falsos
+Suite Setup    Generate fake data
 
 Test Setup    Start session
 Test Teardown    Take Screenshot
@@ -16,7 +16,7 @@ SignUp successfully
     Go to signUp page
     Validate access to correct page
     Register    ${NAME}    ${EMAIl}    ${PASS}    False
-    Salvar Dados em Arquivo
+    Save data in json file
     Validate entry with success
 
 Validate empty name in register form
@@ -38,6 +38,7 @@ SingUp with admin access
     Go to signUp page
     Validate access to correct page
     Register    ${NAME}    ${EMAIl}    ${PASS}    True
+    Save data in json file
     Validate login with admin    ${NAME}
 
 *** Keywords ***

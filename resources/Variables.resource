@@ -13,7 +13,7 @@ ${email}
 ${password}
 
 *** Keywords ***
-Gerar Dados Falsos 
+Generate fake data
     ${name}    FakerLibrary.Name
     ${email}    FakerLibrary.Email
     ${password}    FakerLibrary.Password
@@ -22,10 +22,10 @@ Gerar Dados Falsos
     Set Global Variable    ${EMAIl}    ${email}
     Set Global Variable    ${PASS}    ${password}
 
-Salvar Dados em Arquivo
+Save data in json file
     Create File    dados.json    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}"}
 
-Ler Dados do Arquivo
+Read data in json file
     ${dados}    Load Json From File    dados.json
     ${name_saved}    Get From Dictionary    ${dados}    name
     ${email_saved}    Get From Dictionary    ${dados}    email
@@ -33,6 +33,6 @@ Ler Dados do Arquivo
 
     Set Global Variable    ${NAME_SAVE}    ${name_saved}
     Set Global Variable    ${EMAIL_SAVE}    ${email_saved}
-    Set Global Variable    ${PASS_SAVE}    ${password_saved}
+    Set Global Variable    ${PASS_SAVE}    ${pass}
 
     

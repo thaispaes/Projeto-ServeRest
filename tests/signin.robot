@@ -3,6 +3,8 @@ Documentation        Teste para acessar a tela inicial da ServeRest no WebApp
 
 Resource        ../resources/base.resource
 
+Suite Setup    Gerar Dados Falsos
+
 Test Setup    Start session
 Test Teardown    Take Screenshot
 
@@ -25,10 +27,11 @@ Login input validations
     thaisregina1901@gmail.com    123         Email e/ou senha inválidos
 
 SignIn with an admin access
-    ${account}        Create Dictionary
-    ...        email=thaisregina1901@gmail.com
-    ...        password=Thais123
-    
+    Ler Dados do Arquivo
+    ${account}    Create Dictionary    
+    ...    email=${EMAIL_SAVE}
+    ...    password=${PASS_SAVE}
+
     SignIn    ${account}
     Validate entry with success
 

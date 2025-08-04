@@ -16,7 +16,7 @@ Register
     Fill Text    id=email       ${email}
     Fill Text    id=password    ${password}
 
-    IF   $admin == True
+    IF   ${admin} == True
         Click    css=input#administrador
         Click    css=button >> text=Cadastrar
     ELSE
@@ -25,12 +25,12 @@ Register
 
 
 SignUp validation
-    [Arguments]        ${alerta}
+    [Arguments]        ${alert}
 
     Wait For Elements State    
     ...    css=div .alert
     ...    visible     5
     
-    Get Text    css=div .alert > span    equals    ${alerta}
+    Get Text    css=div .alert > span    equals    ${alert}
 
 

@@ -3,12 +3,8 @@ Documentation        Teste para acessar a tela inicial da ServeRest no WebApp
 
 Resource        ../resources/base.resource
 
-Test Setup        Start session 
-Test Teardown     Take Screenshot
-*** Comments ***
-O Test Setup e o Test Teardown foram usando visto que todos os nossos testes 
-fazem o mesmo fluxo de iniciar o navegador e no final tirar um print, entao para deixar mais fluxo o codigo
-o recomendado e utilizar essa configuracao 
+Test Setup    Start session
+Test Teardown    Take Screenshot
 
 *** Test Cases ***
 SignIn with success in WebApp 
@@ -18,15 +14,6 @@ SignIn with success in WebApp
     
     SignIn    ${account}
     Validate entry with success
-
-
-# Deve negar acesso devido ao email vazio
-#    ${account}        Create Dictionary
-#    ...        email=${EMPTY}
-#    ...        password=Thais123
-#
-#    SignIn    ${account}
-#    SignIn validation        Email é obrigatório    
 
 #Uso de template de testes
 Login input validations

@@ -12,4 +12,3 @@ Resource        Variables.resource
 Start session 
     New Browser     browser=chromium    headless=False
     New Page        https://front.serverest.dev/login    wait_until=domcontentloaded
-

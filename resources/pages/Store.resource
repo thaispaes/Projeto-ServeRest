@@ -4,9 +4,9 @@ Documentation        Acoes e elementos da Store Page
 Library        Browser
 
 *** Keywords ***
-Validate entry with success
+Entry with success
     Get Text    css=h1    equals    Serverest Store
 
-Validate login with admin
+login application with admin
     [Arguments]    ${name}
     Get Text    css=h1    equals    Bem Vindo ${name}

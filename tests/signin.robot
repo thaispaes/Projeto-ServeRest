@@ -9,14 +9,15 @@ Test Setup    Start session
 Test Teardown    Take Screenshot
 
 *** Test Cases ***
+
 SignIn with success in WebApp 
-    Read data in json file
+    Given Read data in json file
     ${account}    Create Dictionary    
     ...    email=${EMAIL_SAVE}
     ...    password=${PASS_SAVE}
     
-    SignIn    ${account}
-    Validate entry with success
+    When SignIn    ${account}
+    Then Entry with success
 
 #Uso de template de testes
 Login input validations

@@ -24,6 +24,7 @@ Generate fake data
 
 Save data in json file
     Create File    dados.json    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}"}
+    Log    Dados:${NAME},${EMAIl},${PASS} 
 
 Read data in json file
     ${dados}    Load Json From File    dados.json
@@ -31,8 +32,10 @@ Read data in json file
     ${email_saved}    Get From Dictionary    ${dados}    email
     ${password_saved}    Get From Dictionary    ${dados}    password
 
+    Log    ${name_saved} ${email_saved} ${password_saved}
+
     Set Global Variable    ${NAME_SAVE}    ${name_saved}
     Set Global Variable    ${EMAIL_SAVE}    ${email_saved}
-    Set Global Variable    ${PASS_SAVE}    ${pass}
+    Set Global Variable    ${PASS_SAVE}    ${password_saved}
 
     

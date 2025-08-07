@@ -13,33 +13,33 @@ Test Teardown    Take Screenshot
 
 *** Test Cases ***
 SignUp successfully
-    Go to signUp page
-    Validate access to correct page
-    Register    ${NAME}    ${EMAIl}    ${PASS}    False
-    Save data in json file
-    Validate entry with success
+    Given Access to signUp page
+    When Validate access to correct page
+    And Register    ${NAME}    ${EMAIl}    ${PASS}    False
+    And Save data in json file
+    Then Entry with success
 
 Validate empty name in register form
-    Go to signUp page
-    Validate access to correct page
-    Attempt signUp    ${EMPTY}    ${EMAIl}    ${PASS}    False    Nome é obrigatório
+    Given Access to signUp page
+    When Validate access to correct page
+    Then Attempt signUp    ${EMPTY}    ${EMAIl}    ${PASS}    False    Nome é obrigatório
 
 Validate empty email in register form
-    Go to signUp page
-    Validate access to correct page
-    Attempt signUp    ${NAME}    ${EMPTY}    ${PASS}    False    Email é obrigatório
+    Given Access to signUp page
+    When Validate access to correct page
+    Then Attempt signUp    ${NAME}    ${EMPTY}    ${PASS}    False    Email é obrigatório
 
 Validate empty Password in register form
-    Go to signUp page
-    Validate access to correct page
-    Attempt signUp    ${NAME}    ${EMAIl}    ${EMPTY}    False    Password é obrigatório
+    Given Access to signUp page
+    When Validate access to correct page
+    Then Attempt signUp    ${NAME}    ${EMAIl}    ${EMPTY}    False    Password é obrigatório
 
 SingUp with admin access
-    Go to signUp page
-    Validate access to correct page
-    Register    ${NAME}    ${EMAIl}    ${PASS}    True
-    Save data in json file
-    Validate login with admin    ${NAME}
+    Given Access to signUp page
+    When Validate access to correct page
+    And Register    ${NAME}    ${EMAIl}    ${PASS}    True
+    And Save data in json file
+    Then login application with admin   ${NAME}
 
 *** Keywords ***
 Attempt signUp

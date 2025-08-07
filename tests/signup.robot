@@ -17,7 +17,7 @@ SignUp successfully
     When Validate access to correct page
     And Register    ${NAME}    ${EMAIl}    ${PASS}    ${ADMIN}
     And Save data in json file
-    Then Entry with success
+    Then Entry with success    ${ADMIN}    ${NAME}
 
 Validate empty name in register form
     Given Access to signUp page
@@ -34,12 +34,6 @@ Validate empty Password in register form
     When Validate access to correct page
     Then Attempt signUp    ${NAME}    ${EMAIl}    ${EMPTY}    False    Password é obrigatório
 
-SingUp with admin access
-    Given Access to signUp page
-    When Validate access to correct page
-    And Register    ${NAME}    ${EMAIl}    ${PASS}    True
-    And Save data in json file
-    Then login application with admin   ${NAME}
 
 *** Keywords ***
 Attempt signUp

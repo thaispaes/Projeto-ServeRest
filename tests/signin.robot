@@ -22,11 +22,11 @@ SignIn with success in WebApp
 #Uso de template de testes
 Login input validations
     [Template]    Attempt signin
-    ${EMPTY}                     Thais123    Email é obrigatório
-    thaisregina1901@gmail.com    ${EMPTY}    Password não pode ficar em branco
-    thais@gmail.com              Thais123    Email e/ou senha inválidos
+    ${EMPTY}                     ${PASS_SAVE}    Email é obrigatório
+    ${EMAIL_SAVE}    ${EMPTY}    Password não pode ficar em branco
+    thais@gmail.com              ${PASS_SAVE}    Email e/ou senha inválidos
     thais@gmail.com              123         Email e/ou senha inválidos
-    thaisregina1901@gmail.com    123         Email e/ou senha inválidos
+    ${EMAIL_SAVE}    123         Email e/ou senha inválidos
 
 *** Keywords ***
 Attempt signin 

@@ -11,16 +11,19 @@ Library    Collections
 ${name}
 ${email}
 ${password}
+${admin}
 
 *** Keywords ***
 Generate fake data
     ${name}    FakerLibrary.Name
     ${email}    FakerLibrary.Email
     ${password}    FakerLibrary.Password
+    ${admin}    FakerLibrary.Boolean
 
     Set Global Variable    ${NAME}    ${name}
     Set Global Variable    ${EMAIl}    ${email}
     Set Global Variable    ${PASS}    ${password}
+    Set Global Variable    ${ADMIN}    ${admin}
 
 Save data in json file
     Create File    dados.json    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}"}

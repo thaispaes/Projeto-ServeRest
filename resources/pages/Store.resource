@@ -5,8 +5,13 @@ Library        Browser
 
 *** Keywords ***
 Entry with success
-    Get Text    css=h1    equals    Serverest Store
+    [Arguments]    ${admin}    ${name}
+    Log    ${admin}
+    IF    ${admin} == True
+        Get Text    css=h1    equals    Bem Vindo ${name}
+    ELSE
+        Get Text    css=h1    equals    Serverest Store    
+    END
+    
 
-login application with admin
-    [Arguments]    ${name}
-    Get Text    css=h1    equals    Bem Vindo ${name}
+

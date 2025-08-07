@@ -17,7 +17,7 @@ SignIn with success in WebApp
     ...    password=${PASS_SAVE}
     
     When SignIn    ${account}
-    Then Entry with success
+    Then Entry with success    ${ADMIN}    ${NAME}
 
 #Uso de template de testes
 Login input validations

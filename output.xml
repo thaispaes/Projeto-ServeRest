@@ -1,191 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-08-07T16:00:40.184708" rpa="false" schemaversion="5">
-<suite id="s1" name="Signin" source="c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signin.robot">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-08-07T16:20:47.562723" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signup.robot">
 <kw name="Generate fake data" owner="Variables" type="SETUP">
 <kw name="Name" owner="FakerLibrary">
-<msg time="2025-08-07T16:00:41.329502" level="INFO">${name} = Jill Davis</msg>
+<msg time="2025-08-07T16:20:48.393877" level="INFO">${name} = Nicole Solis</msg>
 <var>${name}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2025-08-07T16:00:41.326282" elapsed="0.006751"/>
+<status status="PASS" start="2025-08-07T16:20:48.392946" elapsed="0.001813"/>
 </kw>
 <kw name="Email" owner="FakerLibrary">
-<msg time="2025-08-07T16:00:41.334306" level="INFO">${email} = krista10@example.org</msg>
+<msg time="2025-08-07T16:20:48.396373" level="INFO">${email} = brittanyquinn@example.net</msg>
 <var>${email}</var>
-<status status="PASS" start="2025-08-07T16:00:41.333444" elapsed="0.001084"/>
+<status status="PASS" start="2025-08-07T16:20:48.395179" elapsed="0.001442"/>
 </kw>
 <kw name="Password" owner="FakerLibrary">
-<msg time="2025-08-07T16:00:41.335553" level="INFO">${password} = _^7GkEmLcL</msg>
+<msg time="2025-08-07T16:20:48.397474" level="INFO">${password} = rgv2TcZ$t(</msg>
 <var>${password}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2025-08-07T16:00:41.334816" elapsed="0.000919"/>
+<status status="PASS" start="2025-08-07T16:20:48.396920" elapsed="0.000716"/>
+</kw>
+<kw name="Boolean" owner="FakerLibrary">
+<msg time="2025-08-07T16:20:48.398393" level="INFO">${admin} = True</msg>
+<var>${admin}</var>
+<doc>Generate a random boolean value based on ``chance_of_getting_true``.</doc>
+<status status="PASS" start="2025-08-07T16:20:48.397858" elapsed="0.000643"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:41.337575" level="INFO">${NAME} = Jill Davis</msg>
+<msg time="2025-08-07T16:20:48.399877" level="INFO">${NAME} = Nicole Solis</msg>
 <arg>${NAME}</arg>
 <arg>${name}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:41.336692" elapsed="0.001341"/>
+<status status="PASS" start="2025-08-07T16:20:48.399321" elapsed="0.000690"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:41.339048" level="INFO">${EMAIl} = krista10@example.org</msg>
+<msg time="2025-08-07T16:20:48.400618" level="INFO">${EMAIl} = brittanyquinn@example.net</msg>
 <arg>${EMAIl}</arg>
 <arg>${email}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:41.338337" elapsed="0.000965"/>
+<status status="PASS" start="2025-08-07T16:20:48.400186" elapsed="0.000570"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:41.340871" level="INFO">${PASS} = _^7GkEmLcL</msg>
+<msg time="2025-08-07T16:20:48.401766" level="INFO">${PASS} = rgv2TcZ$t(</msg>
 <arg>${PASS}</arg>
 <arg>${password}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:41.339601" elapsed="0.001463"/>
+<status status="PASS" start="2025-08-07T16:20:48.400919" elapsed="0.000967"/>
 </kw>
-<status status="PASS" start="2025-08-07T16:00:41.324399" elapsed="0.016862"/>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-08-07T16:20:48.402463" level="INFO">${ADMIN} = True</msg>
+<arg>${ADMIN}</arg>
+<arg>${admin}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-08-07T16:20:48.402017" elapsed="0.000685"/>
 </kw>
-<test id="s1-t1" name="SignIn with success in WebApp" line="13">
+<status status="PASS" start="2025-08-07T16:20:48.391902" elapsed="0.011058"/>
+</kw>
+<test id="s1-t1" name="SignUp successfully" line="15">
 <kw name="Start session" owner="base" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2025-08-07T16:00:41.344430" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\thais.regina.santos\\OneDrive - Accenture\\Documents\\GitHub\\Projeto-ServeRest\\browser\\traces\\temp\\13013e21-c347-44bf-8935-83de0deea6fd"}</msg>
-<msg time="2025-08-07T16:00:42.801250" level="INFO">Starting Browser process C:\Python\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:49255</msg>
-<msg time="2025-08-07T16:00:46.359949" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\thais.regina.santos\\OneDrive - Accenture\\Documents\\GitHub\\Projeto-ServeRest\\browser\\traces\\temp\\13013e21-c347-44bf-8935-83de0deea6fd"}</msg>
+<msg time="2025-08-07T16:20:48.406536" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\thais.regina.santos\\OneDrive - Accenture\\Documents\\GitHub\\Projeto-ServeRest\\browser\\traces\\temp\\8c46a6f0-6033-4d19-8147-f2aa73e6df73"}</msg>
+<msg time="2025-08-07T16:20:48.922916" level="INFO">Starting Browser process C:\Python\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:61518</msg>
+<msg time="2025-08-07T16:20:52.894124" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\thais.regina.santos\\OneDrive - Accenture\\Documents\\GitHub\\Projeto-ServeRest\\browser\\traces\\temp\\8c46a6f0-6033-4d19-8147-f2aa73e6df73"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-08-07T16:00:41.343149" elapsed="5.017225"/>
+<status status="PASS" start="2025-08-07T16:20:48.405234" elapsed="4.489322"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-08-07T16:00:54.072361" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
-<msg time="2025-08-07T16:00:54.072712" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-08-07T16:21:00.822108" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-08-07T16:21:00.822449" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://front.serverest.dev/login</arg>
 <arg>wait_until=domcontentloaded</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-08-07T16:00:46.360763" elapsed="7.712199"/>
+<status status="PASS" start="2025-08-07T16:20:52.894966" elapsed="7.927712"/>
 </kw>
-<status status="PASS" start="2025-08-07T16:00:41.342293" elapsed="12.730969"/>
+<status status="PASS" start="2025-08-07T16:20:48.404014" elapsed="12.418855"/>
 </kw>
-<kw name="Given Read data in json file" owner="Variables">
-<kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-08-07T16:00:54.087356" level="INFO">${dados} = {'name': 'Philip Johnson', 'email': 'hinesrose@example.com', 'password': '_oDgah8c#9'}</msg>
-<var>${dados}</var>
-<arg>dados.json</arg>
-<doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.074796" elapsed="0.012811"/>
+<kw name="Given Access to signUp page" owner="SignIn">
+<kw name="Click" owner="Browser">
+<msg time="2025-08-07T16:21:00.825689" level="INFO">Clicks the element 'css=a.btn &gt;&gt; text=Cadastre-se'.</msg>
+<arg>css=a.btn &gt;&gt; text=Cadastre-se</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-07T16:21:00.824429" elapsed="0.131621"/>
 </kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-07T16:00:54.088692" level="INFO">${name_saved} = Philip Johnson</msg>
-<var>${name_saved}</var>
-<arg>${dados}</arg>
-<arg>name</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.087946" elapsed="0.000938"/>
+<status status="PASS" start="2025-08-07T16:21:00.823539" elapsed="0.133007"/>
 </kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-07T16:00:54.090195" level="INFO">${email_saved} = hinesrose@example.com</msg>
-<var>${email_saved}</var>
-<arg>${dados}</arg>
-<arg>email</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.089572" elapsed="0.000781"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-07T16:00:54.091622" level="INFO">${password_saved} = _oDgah8c#9</msg>
-<var>${password_saved}</var>
-<arg>${dados}</arg>
-<arg>password</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.090626" elapsed="0.001232"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-08-07T16:00:54.092928" level="INFO">Philip Johnson hinesrose@example.com _oDgah8c#9</msg>
-<arg>${name_saved} ${email_saved} ${password_saved}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.092222" elapsed="0.000936"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:54.095142" level="INFO">${NAME_SAVE} = Philip Johnson</msg>
-<arg>${NAME_SAVE}</arg>
-<arg>${name_saved}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.093512" elapsed="0.001860"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:54.097223" level="INFO">${EMAIL_SAVE} = hinesrose@example.com</msg>
-<arg>${EMAIL_SAVE}</arg>
-<arg>${email_saved}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.095645" elapsed="0.001837"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-07T16:00:54.099942" level="INFO">${PASS_SAVE} = _oDgah8c#9</msg>
-<arg>${PASS_SAVE}</arg>
-<arg>${password_saved}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.097802" elapsed="0.002378"/>
-</kw>
-<status status="PASS" start="2025-08-07T16:00:54.074031" elapsed="0.026261"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-08-07T16:00:54.101587" level="INFO">${account} = {'email': 'hinesrose@example.com', 'password': '_oDgah8c#9'}</msg>
-<var>${account}</var>
-<arg>email=${EMAIL_SAVE}</arg>
-<arg>password=${PASS_SAVE}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.100809" elapsed="0.001486"/>
-</kw>
-<kw name="And SignIn" owner="SignIn">
+<kw name="When Validate access to correct page" owner="SignUp">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-08-07T16:00:54.166978" level="INFO">Text: 'Login'</msg>
-<arg>css=h1.font-robot</arg>
-<arg>equal</arg>
-<arg>Login</arg>
+<msg time="2025-08-07T16:21:00.991080" level="INFO">Text: 'Cadastro'</msg>
+<arg>css=h2.font-robot &gt;&gt; text=Cadastro</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.104076" elapsed="0.064010"/>
+<status status="PASS" start="2025-08-07T16:21:00.957975" elapsed="0.033909"/>
+</kw>
+<status status="PASS" start="2025-08-07T16:21:00.957295" elapsed="0.034776"/>
+</kw>
+<kw name="And Register" owner="SignUp">
+<kw name="Validate access to correct page" owner="SignUp">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-08-07T16:21:01.015512" level="INFO">Text: 'Cadastro'</msg>
+<arg>css=h2.font-robot &gt;&gt; text=Cadastro</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-07T16:21:00.994425" elapsed="0.021305"/>
+</kw>
+<status status="PASS" start="2025-08-07T16:21:00.993798" elapsed="0.022062"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-07T16:00:54.170199" level="INFO">Fills the text 'hinesrose@example.com' in the given field.</msg>
+<msg time="2025-08-07T16:21:01.017192" level="INFO">Fills the text 'Nicole Solis' in the given field.</msg>
+<arg>id=nome</arg>
+<arg>${name}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.016017" elapsed="0.023516"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-08-07T16:21:01.041095" level="INFO">Fills the text 'brittanyquinn@example.net' in the given field.</msg>
 <arg>id=email</arg>
-<arg>${account}[email]</arg>
+<arg>${email}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.168745" elapsed="0.024354"/>
+<status status="PASS" start="2025-08-07T16:21:01.039964" elapsed="0.021598"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-07T16:00:54.196103" level="INFO">Fills the text '_oDgah8c#9' in the given field.</msg>
+<msg time="2025-08-07T16:21:01.063871" level="INFO">Fills the text 'rgv2TcZ$t(' in the given field.</msg>
 <arg>id=password</arg>
-<arg>${account}[password]</arg>
+<arg>${password}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.193607" elapsed="0.030433"/>
+<status status="PASS" start="2025-08-07T16:21:01.061864" elapsed="0.019294"/>
 </kw>
+<if>
+<branch type="IF" condition="${admin} == True">
 <kw name="Click" owner="Browser">
-<msg time="2025-08-07T16:00:54.225528" level="INFO">Clicks the element 'css=button &gt;&gt; text=Entrar'.</msg>
-<arg>css=button &gt;&gt; text=Entrar</arg>
+<msg time="2025-08-07T16:21:01.083589" level="INFO">Clicks the element 'css=input#administrador'.</msg>
+<arg>css=input#administrador</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.224520" elapsed="0.058150"/>
+<status status="PASS" start="2025-08-07T16:21:01.082685" elapsed="0.041295"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-07T16:00:59.284004" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-07T16:00:54.282980" elapsed="5.001415"/>
+<kw name="Click" owner="Browser">
+<msg time="2025-08-07T16:21:01.126623" level="INFO">Clicks the element 'css=button &gt;&gt; text=Cadastrar'.</msg>
+<arg>css=button &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.125005" elapsed="0.053201"/>
 </kw>
-<arg>${account}</arg>
-<status status="PASS" start="2025-08-07T16:00:54.103225" elapsed="5.181381"/>
+<status status="PASS" start="2025-08-07T16:21:01.081602" elapsed="0.096845"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click" owner="Browser">
+<arg>css=button &gt;&gt; text=Cadastrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-08-07T16:21:01.179221" elapsed="0.000374"/>
+</kw>
+<status status="NOT RUN" start="2025-08-07T16:21:01.178597" elapsed="0.001165"/>
+</branch>
+<status status="PASS" start="2025-08-07T16:21:01.081532" elapsed="0.098331"/>
+</if>
+<arg>${NAME}</arg>
+<arg>${EMAIl}</arg>
+<arg>${PASS}</arg>
+<arg>True</arg>
+<status status="PASS" start="2025-08-07T16:21:00.992815" elapsed="0.187154"/>
+</kw>
+<kw name="And Save data in json file" owner="Variables">
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-08-07T16:21:01.183533" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\dados.json"&gt;C:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\dados.json&lt;/a&gt;'.</msg>
+<arg>dados.json</arg>
+<arg>{"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}"}</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.181982" elapsed="0.001834"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-07T16:21:01.184681" level="INFO">Dados:Nicole Solis,brittanyquinn@example.net,rgv2TcZ$t(</msg>
+<arg>Dados:${NAME},${EMAIl},${PASS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.184118" elapsed="0.000779"/>
+</kw>
+<status status="PASS" start="2025-08-07T16:21:01.181192" elapsed="0.003863"/>
 </kw>
 <kw name="Then Entry with success" owner="Store">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-07T16:21:01.190146" level="INFO">True</msg>
+<arg>${admin}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.189584" elapsed="0.001309"/>
+</kw>
+<if>
+<branch type="IF" condition="${admin} == True">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-08-07T16:00:59.314495" level="INFO">Text: 'Serverest Store'</msg>
+<msg time="2025-08-07T16:21:05.625904" level="INFO">Text: 'Bem Vindo Nicole Solis'</msg>
+<arg>css=h1</arg>
+<arg>equals</arg>
+<arg>Bem Vindo ${name}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-07T16:21:01.191723" elapsed="4.434720"/>
+</kw>
+<status status="PASS" start="2025-08-07T16:21:01.191124" elapsed="4.435601"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Text" owner="Browser">
 <arg>css=h1</arg>
 <arg>equals</arg>
 <arg>Serverest Store</arg>
@@ -193,23 +228,29 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-07T16:00:59.293459" elapsed="0.022252"/>
+<status status="NOT RUN" start="2025-08-07T16:21:05.628002" elapsed="0.000807"/>
 </kw>
-<status status="PASS" start="2025-08-07T16:00:59.292518" elapsed="0.023443"/>
+<status status="NOT RUN" start="2025-08-07T16:21:05.626926" elapsed="0.002276"/>
+</branch>
+<status status="PASS" start="2025-08-07T16:21:01.191080" elapsed="4.438439"/>
+</if>
+<arg>True</arg>
+<arg>${NAME}</arg>
+<status status="PASS" start="2025-08-07T16:21:01.188622" elapsed="4.441131"/>
 </kw>
 <kw name="Take Screenshot" owner="Browser" type="TEARDOWN">
-<msg time="2025-08-07T16:00:59.558402" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-07T16:21:05.787679" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-08-07T16:00:59.353559" elapsed="0.205284"/>
+<status status="PASS" start="2025-08-07T16:21:05.631377" elapsed="0.157982"/>
 </kw>
-<msg time="2025-08-07T16:00:59.583321" level="INFO">Switching context to context=bdd90996-991d-4768-9787-0352db07b30f in CURRENT</msg>
-<msg time="2025-08-07T16:00:59.601321" level="INFO">Successfully changed active context: context=bdd90996-991d-4768-9787-0352db07b30f</msg>
-<msg time="2025-08-07T16:00:59.666056" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-08-07T16:00:41.341447" elapsed="18.220059"/>
+<msg time="2025-08-07T16:21:05.808590" level="INFO">Switching context to context=43e417dd-ced6-4c7b-8c70-d71b3b0a8ddb in CURRENT</msg>
+<msg time="2025-08-07T16:21:05.820587" level="INFO">Successfully changed active context: context=43e417dd-ced6-4c7b-8c70-d71b3b0a8ddb</msg>
+<msg time="2025-08-07T16:21:05.871423" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-08-07T16:20:48.403110" elapsed="17.387090"/>
 </test>
-<doc>Teste para acessar a tela inicial da ServeRest no WebApp</doc>
-<status status="PASS" start="2025-08-07T16:00:40.191407" elapsed="19.508480"/>
+<doc>Acoes e elementos da SignUp Page</doc>
+<status status="PASS" start="2025-08-07T16:20:47.569197" elapsed="18.326438"/>
 </suite>
 <statistics>
 <total>
@@ -218,9 +259,13 @@
 <tag>
 </tag>
 <suite>
-<stat name="Signin" id="s1" pass="1" fail="0" skip="0">Signin</stat>
+<stat name="Signup" id="s1" pass="1" fail="0" skip="0">Signup</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-08-07T16:20:48.351221" level="ERROR">Error in file 'c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signin.robot' on line 6: Setting 'Suite Setup' is not allowed in resource file.</msg>
+<msg time="2025-08-07T16:20:48.353431" level="ERROR">Error in file 'c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signin.robot' on line 8: Setting 'Test Setup' is not allowed in resource file.</msg>
+<msg time="2025-08-07T16:20:48.353922" level="ERROR">Error in file 'c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signin.robot' on line 9: Setting 'Test Teardown' is not allowed in resource file.</msg>
+<msg time="2025-08-07T16:20:48.354728" level="ERROR">Error in file 'c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signup.robot' on line 5: Error in file 'c:\Users\thais.regina.santos\OneDrive - Accenture\Documents\GitHub\Projeto-ServeRest\tests\signin.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>

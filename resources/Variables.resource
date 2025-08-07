@@ -12,6 +12,7 @@ ${name}
 ${email}
 ${password}
 ${admin}
+${file}    dados.json
 
 *** Keywords ***
 Generate fake data
@@ -26,7 +27,15 @@ Generate fake data
     Set Global Variable    ${ADMIN}    ${admin}
 
 Save data in json file
-    Create File    dados.json    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}"}
+    
+    ${created}=    Run Keyword And Ignore Error    File Should Exist    dados.json
+    IF    ${created} == 'FAIL'
+        ${json}=    Load Json From File    ${file}
+        Add Object To Json    ${json}    ${file}    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}", "Admin": "${ADMIN}"}
+   
+    ELSE
+        Create File    ${file}    {"name": "${NAME}", "email": "${EMAIL}", "password": "${PASS}, "Admin: "${ADMIN}}    
+    END
     Log    Dados:${NAME},${EMAIl},${PASS} 
 
 Read data in json file

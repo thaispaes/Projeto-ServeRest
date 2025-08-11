@@ -10,5 +10,7 @@ Resource        Variables.resource
 
 *** Keywords ***
 Start session 
+    ${old_timeout}=    Set Browser Timeout    2 minutes
     New Browser     browser=chromium    headless=False
-    New Page        https://front.serverest.dev/login    wait_until=domcontentloaded
+    New Page        https://front.serverest.dev/login    wait_until=networkidle
+    Set Browser Timeout    ${old_timeout}

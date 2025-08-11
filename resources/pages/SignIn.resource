@@ -5,11 +5,11 @@ Library        Browser
 
 *** Keywords ***
 SignIn
-    [Arguments]        ${account}  
+    [Arguments]        ${email}    ${password}
     Get Text        css=h1.font-robot    equal     Login
 
-    Fill Text       id=email        ${account}[email]
-    Fill Text       id=password     ${account}[password]
+    Fill Text       id=email        ${email}
+    Fill Text       id=password     ${password}
 
     Click           css=button >> text=Entrar
 

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Joshua Kim",
+        "email": "emily59@example.org",
+        "password": "G^R4EXRuom",
+        "admin": true
+    },
+    {
+        "name": "Alicia Elliott",
+        "email": "hesscrystal@example.com",
+        "password": "+hrceQpLw8",
+        "admin": false
+    },
+    {
+        "name": "Shelly Walker",
+        "email": "ewallace@example.net",
+        "password": "1#VM6ne4_@",
+        "admin": true
+    }
+]

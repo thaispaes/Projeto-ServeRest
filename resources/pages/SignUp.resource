@@ -23,8 +23,7 @@ Register
         Click    css=button >> text=Cadastrar  
     END
 
-
-SignUp validation
+Validations
     [Arguments]        ${alert}
 
     Wait For Elements State    
@@ -33,4 +32,10 @@ SignUp validation
     
     Get Text    css=div .alert > span    equals    ${alert}
 
+Attempt signUp
+  [Arguments]    ${name}    ${email}    ${password}    ${admin}    ${output_message}
+
+
+   Register                    ${name}    ${email}    ${password}    ${admin}
+   Validations           ${output_message}   
 

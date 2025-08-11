@@ -11,16 +11,12 @@ Test Teardown    Take Screenshot
 *** Test Cases ***
 
 SignIn with success in WebApp 
-    Given Read data in json file
-    ${account}    Create Dictionary    
-    ...    email=${EMAIL_SAVE}
-    ...    password=${PASS_SAVE}
-    
-    When SignIn    ${account}
-    Then Entry with success    ${ADMIN}    ${NAME}
+    Given Read data in json file    
+    When SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
+    Then Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
 
 #Uso de template de testes
-Login input validations
+Login input validations 
     [Template]    Attempt signin
     ${EMPTY}                     ${PASS_SAVE}    Email é obrigatório
     ${EMAIL_SAVE}    ${EMPTY}    Password não pode ficar em branco

@@ -1,65 +1,83 @@
-{"level":30,"time":"2025-08-07T20:02:46.572Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Listening on 127.0.0.1:62343"}
-(node:33636) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-08-11T19:32:22.271Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Listening on 127.0.0.1:51301"}
+(node:28592) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-08-07T20:02:46.606Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-08-07T20:02:47.776Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Adding browser to stack: chromium, version: 139.0.7258.5"}
-{"level":30,"time":"2025-08-07T20:02:47.777Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-08-07T20:02:47.777Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-08-07T20:02:47.787Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@962bedd7dc992d55d5fc4f26bbbe8adf\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=a1f9b9b9-eb0e-436c-beaf-ee337c584624\"}"}
-{"level":30,"time":"2025-08-07T20:02:47.787Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-08-07T20:02:47.840Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Setting default timeout for context context=0bd265a8-2e7f-437a-a145-76c986c62f03 to 10000"}
-{"level":30,"time":"2025-08-07T20:02:47.841Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=0bd265a8-2e7f-437a-a145-76c986c62f03"}
-{"level":30,"time":"2025-08-07T20:02:49.058Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Video path: undefined"}
-{"level":30,"time":"2025-08-07T20:02:49.058Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Changed active page"}
-{"level":30,"time":"2025-08-07T20:02:53.990Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method newPage"}
-{"level":30,"time":"2025-08-07T20:02:54.001Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.002Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=a.btn >> text=Cadastre-se in page."}
-{"level":30,"time":"2025-08-07T20:02:54.139Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.146Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:54.146Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=h2.font-robot >> text=Cadastro in page."}
-{"level":30,"time":"2025-08-07T20:02:54.174Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Retrieved text for element css=h2.font-robot >> text=Cadastro containing Cadastro"}
-{"level":30,"time":"2025-08-07T20:02:54.174Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:54.183Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:54.183Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=h2.font-robot >> text=Cadastro in page."}
-{"level":30,"time":"2025-08-07T20:02:54.196Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Retrieved text for element css=h2.font-robot >> text=Cadastro containing Cadastro"}
-{"level":30,"time":"2025-08-07T20:02:54.196Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:54.201Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.202Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with id=nome in page."}
-{"level":30,"time":"2025-08-07T20:02:54.218Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.223Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.223Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with id=email in page."}
-{"level":30,"time":"2025-08-07T20:02:54.236Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.242Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.242Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with id=password in page."}
-{"level":30,"time":"2025-08-07T20:02:54.257Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method fillText"}
-{"level":30,"time":"2025-08-07T20:02:54.263Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.263Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=input#administrador in page."}
-{"level":30,"time":"2025-08-07T20:02:54.309Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.314Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.314Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=button >> text=Cadastrar in page."}
-{"level":30,"time":"2025-08-07T20:02:54.362Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method click"}
-{"level":30,"time":"2025-08-07T20:02:54.385Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:54.385Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Strict mode is enabled, find Locator with css=h1 in page."}
-{"level":30,"time":"2025-08-07T20:02:58.790Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Retrieved text for element css=h1 containing Bem Vindo Rodney Li"}
-{"level":30,"time":"2025-08-07T20:02:58.790Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getText"}
-{"level":30,"time":"2025-08-07T20:02:58.798Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2025-08-07T20:02:58.798Z","pid":33636,"hostname":"c11-pxxzoqftqrj","Take screenshot with options: ":{"path":"C:\\Users\\thais.regina.santos\\OneDrive - Accenture\\Documents\\GitHub\\Projeto-ServeRest\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2025-08-07T20:02:58.926Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2025-08-07T20:02:58.933Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.936Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.938Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.940Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.941Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.942Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.944Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.946Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:58.948Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=0bd265a8-2e7f-437a-a145-76c986c62f03"}
-{"level":30,"time":"2025-08-07T20:02:58.948Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Changing current active page: page=2ab3ea92-8da3-4741-829f-96a9600e2de4"}
-{"level":30,"time":"2025-08-07T20:02:58.948Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Changed active page"}
-{"level":30,"time":"2025-08-07T20:02:58.953Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeContext"}
-{"level":30,"time":"2025-08-07T20:02:58.967Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Removed page=6dab61f6-13d6-4844-a4b1-caab28a07840 from context=0bd265a8-2e7f-437a-a145-76c986c62f03 page stack"}
-{"level":30,"time":"2025-08-07T20:02:58.999Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method closeContext"}
-{"level":30,"time":"2025-08-07T20:02:59.016Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:02:59.016Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-07T20:03:01.143Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2025-08-07T20:03:01.696Z","pid":33636,"hostname":"c11-pxxzoqftqrj","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2025-08-11T19:32:22.417Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-08-11T19:32:25.227Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Adding browser to stack: chromium, version: 139.0.7258.5"}
+{"level":30,"time":"2025-08-11T19:32:25.228Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-08-11T19:32:25.227Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-08-11T19:32:25.251Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-08-11T19:32:25.252Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@681d2ee2532bb77554bee0176bb4e8c4\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=073cbb0a-4d4b-4090-89b0-4a8d4762d866\"}"}
+{"level":30,"time":"2025-08-11T19:32:25.278Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Setting default timeout for context context=ad6541e0-2c7f-44a0-a3cc-c77154741a49 to 10000"}
+{"level":30,"time":"2025-08-11T19:32:25.279Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=ad6541e0-2c7f-44a0-a3cc-c77154741a49"}
+{"level":30,"time":"2025-08-11T19:32:27.208Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Video path: undefined"}
+{"level":30,"time":"2025-08-11T19:32:27.209Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active page"}
+{"level":30,"time":"2025-08-11T19:32:37.223Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  newPage"}
+================= Original suppressed error =================
+page.goto: Timeout 10000ms exceeded.
+Call log:
+[2m  - navigating to "https://front.serverest.dev/login", waiting until "domcontentloaded"[22m
+
+    at newPage (C:\Python\Lib\site-packages\Browser\wrapper\index.js:12572:18)
+    at async PlaywrightServer.newPage (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-08-11T19:32:37.229Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-08-11T19:32:37.230Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-08-11T19:32:37.358Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-08-11T19:32:37.359Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-08-11T19:32:37.365Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
+    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
+    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
+    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:536:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-08-11T19:32:37.366Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2025-08-11T19:32:37.409Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.409Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.414Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.414Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.418Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.418Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.424Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.424Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.428Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=ad6541e0-2c7f-44a0-a3cc-c77154741a49"}
+{"level":30,"time":"2025-08-11T19:32:37.430Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-08-11T19:32:37.448Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-08-11T19:32:37.465Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:37.466Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-11T19:32:39.622Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeAllBrowsers"}

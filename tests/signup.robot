@@ -2,7 +2,7 @@
 Documentation        Acoes e elementos da SignUp Page
 
 Resource        ../resources/base.resource
-Resource    signin.robot
+Resource        signin.robot
 
 Library        FakerLibrary
 
@@ -15,14 +15,15 @@ Test Teardown    Take Screenshot
 SignUp successfully
     Given Access to signUp page
     When Validate access to correct page
-    And Register    ${NAME}    ${EMAIl}    ${PASS}    ${ADMIN}
-    And Save data in json file
+    And Register    ${NAME}    ${EMAIL}    ${PASS}    ${ADMIN}
+    And Save data in json file     
     Then Entry with success    ${ADMIN}    ${NAME}
+    
 
 Validate empty name in register form
     Given Access to signUp page
     When Validate access to correct page
-    Then Attempt signUp    ${EMPTY}    ${EMAIl}    ${PASS}    False    Nome é obrigatório
+    Then Attempt signUp    ${EMPTY}    ${EMAIL}    ${PASS}    False    Nome é obrigatório
 
 Validate empty email in register form
     Given Access to signUp page
@@ -32,15 +33,9 @@ Validate empty email in register form
 Validate empty Password in register form
     Given Access to signUp page
     When Validate access to correct page
-    Then Attempt signUp    ${NAME}    ${EMAIl}    ${EMPTY}    False    Password é obrigatório
+    Then Attempt signUp    ${NAME}    ${EMAIL}    ${EMPTY}    False    Password é obrigatório
 
 
-*** Keywords ***
-Attempt signUp
-  [Arguments]    ${name}    ${email}    ${password}    ${admin}    ${output_message}
-
-
-   Register                    ${name}    ${email}    ${password}    ${admin}
-   SignUp validation           ${output_message}    
+ 
 
 

@@ -1,26 +1,8 @@
 [
     {
-        "name": "Joshua Kim",
-        "email": "emily59@example.org",
-        "password": "G^R4EXRuom",
-        "admin": true
-    },
-    {
-        "name": "Alicia Elliott",
-        "email": "hesscrystal@example.com",
-        "password": "+hrceQpLw8",
+        "name": "Nicholas Moore",
+        "email": "raymond82@example.org",
+        "password": "E%VXd14aMR",
         "admin": false
-    },
-    {
-        "name": "Shelly Walker",
-        "email": "ewallace@example.net",
-        "password": "1#VM6ne4_@",
-        "admin": true
-    },
-    {
-        "name": "Monica Bell",
-        "email": "melissa89@example.org",
-        "password": "+jbm0_Od70",
-        "admin": true
     }
 ]

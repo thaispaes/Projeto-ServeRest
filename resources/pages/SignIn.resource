@@ -15,14 +15,15 @@ SignIn
 
     Sleep    5
 
-SignIn validation
-    [Arguments]        ${alerta}
+Attempt signIn without success
+    [Arguments]        ${output_message}
 
     Wait For Elements State    
     ...    css=div .alert
     ...    visible     5
     
-    Get Text    css=div .alert > span    equals    ${alerta}
+    Get Text    css=div .alert > span    equals    ${output_message}
 
 Access to signUp page
     Click    css=a.btn >> text=Cadastre-se
+ 

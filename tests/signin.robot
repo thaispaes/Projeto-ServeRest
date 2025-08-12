@@ -16,22 +16,29 @@ SignIn with success in WebApp
     Then Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
 
 #Uso de template de testes
-Login input validations 
-    [Template]    Attempt signin
-    ${EMPTY}                     ${PASS_SAVE}    Email é obrigatório
-    ${EMAIL_SAVE}    ${EMPTY}    Password não pode ficar em branco
-    thais@gmail.com              ${PASS_SAVE}    Email e/ou senha inválidos
-    thais@gmail.com              123         Email e/ou senha inválidos
-    ${EMAIL_SAVE}    123         Email e/ou senha inválidos
+Validate empty email in login 
+    Given Read data in json file
+    When SignIn    ${EMPTY}    ${PASS_SAVE}
+    Then Attempt signIn without success     Email é obrigatório
+
+Validate empty password in login 
+    Given Read data in json file
+    When SignIn    ${EMAIL_SAVE}    ${EMPTY}
+    Then Attempt signIn without success     Password é obrigatório
+
+Validate wrong email in login 
+    Given Read data in json file
+    When SignIn    teste@teste.com    ${PASS_SAVE}
+    Then Attempt signIn without success     Email e/ou senha inválidos
+
+Validate wrong password in login 
+    Given Read data in json file
+    When SignIn    ${EMAIL_SAVE}    123teste
+    Then Attempt signIn without success     Email e/ou senha inválidos
+
+Validate wrong email and password in login 
+    Given Read data in json file
+    When SignIn    teste@teste.com    123teste
+    Then Attempt signIn without success     Email e/ou senha inválidos
 
 *** Keywords ***
-Attempt signin 
-    [Arguments]    ${email}    ${password}    ${output_message}
-
-    ${account}        Create Dictionary
-    ...        email=${email}
-    ...        password=${password}
-    
-
-   SignIn                   ${account}
-   SignIn validation        ${output_message}    

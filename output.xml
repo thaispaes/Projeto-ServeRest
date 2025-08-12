@@ -1,199 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-12T12:34:17.744780" rpa="false" schemaversion="5">
-<suite id="s1" name="Signin" source="d:\codigos\GitHub\Projeto-ServeRest\tests\signin.robot">
-<kw name="Generate fake data" owner="Variables" type="SETUP">
-<kw name="Name" owner="FakerLibrary">
-<msg time="2025-08-12T12:34:18.391527" level="INFO">${name} = Kevin Blair</msg>
-<var>${name}</var>
-<doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2025-08-12T12:34:18.390855" elapsed="0.002404"/>
-</kw>
-<kw name="Email" owner="FakerLibrary">
-<msg time="2025-08-12T12:34:18.394149" level="INFO">${email} = robertsonpeter@example.org</msg>
-<var>${email}</var>
-<status status="PASS" start="2025-08-12T12:34:18.393510" elapsed="0.000779"/>
-</kw>
-<kw name="Password" owner="FakerLibrary">
-<msg time="2025-08-12T12:34:18.394896" level="INFO">${password} = ^8AEAZVlr2</msg>
-<var>${password}</var>
-<doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.394474" elapsed="0.000540"/>
-</kw>
-<kw name="Boolean" owner="FakerLibrary">
-<msg time="2025-08-12T12:34:18.395722" level="INFO">${admin} = False</msg>
-<var>${admin}</var>
-<doc>Generate a random boolean value based on ``chance_of_getting_true``.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.395293" elapsed="0.000565"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:18.397162" level="INFO">${NAME} = Kevin Blair</msg>
-<arg>${NAME}</arg>
-<arg>${name}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.396620" elapsed="0.000699"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:18.397957" level="INFO">${EMAIL} = robertsonpeter@example.org</msg>
-<arg>${EMAIL}</arg>
-<arg>${email}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.397527" elapsed="0.000565"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:18.399065" level="INFO">${PASS} = ^8AEAZVlr2</msg>
-<arg>${PASS}</arg>
-<arg>${password}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.398260" elapsed="0.000927"/>
-</kw>
-<kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:18.399860" level="INFO">${ADMIN} = False</msg>
-<arg>${ADMIN}</arg>
-<arg>${admin}</arg>
-<doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.399347" elapsed="0.000702"/>
-</kw>
-<status status="PASS" start="2025-08-12T12:34:18.389965" elapsed="0.010257"/>
-</kw>
-<test id="s1-t1" name="Validate wrong email and password in login" line="39">
-<kw name="Start session" owner="base" type="SETUP">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-12T19:51:56.117841" rpa="false" schemaversion="5">
+<suite id="s1" name="Store" source="d:\codigos\GitHub\Projeto-ServeRest\tests\store.robot">
+<test id="s1-t1" name="Add items in the shop list" line="21">
+<kw name="Start session" owner="Base" type="SETUP">
 <kw name="Set Browser Timeout" owner="Browser">
-<msg time="2025-08-12T12:34:18.426643" level="INFO">Starting Browser process C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:52026</msg>
-<msg time="2025-08-12T12:34:19.474378" level="INFO">${old_timeout} = 10 seconds</msg>
+<msg time="2025-08-12T19:51:56.798042" level="INFO">Starting Browser process C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:51367</msg>
+<msg time="2025-08-12T19:51:57.845377" level="INFO">${old_timeout} = 10 seconds</msg>
 <var>${old_timeout}</var>
 <arg>2 minutes</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-08-12T12:34:18.401625" elapsed="1.073043"/>
+<status status="PASS" start="2025-08-12T19:51:56.775110" elapsed="1.070581"/>
 </kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2025-08-12T12:34:19.476295" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\375653e9-7934-4162-a04d-1c2cee680908"}</msg>
-<msg time="2025-08-12T12:34:19.663187" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\375653e9-7934-4162-a04d-1c2cee680908"}</msg>
+<msg time="2025-08-12T19:51:57.847145" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\1aa82b00-0fbc-4187-bb49-3853d33122d4"}</msg>
+<msg time="2025-08-12T19:51:58.050259" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\traces\\temp\\1aa82b00-0fbc-4187-bb49-3853d33122d4"}</msg>
 <arg>browser=chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-08-12T12:34:19.475080" elapsed="0.188668"/>
+<status status="PASS" start="2025-08-12T19:51:57.846087" elapsed="0.204789"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2025-08-12T12:34:22.607527" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
-<msg time="2025-08-12T12:34:22.607791" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-08-12T19:52:01.460087" level="INFO">Successfully initialized new page object and opened url: https://front.serverest.dev/login</msg>
+<msg time="2025-08-12T19:52:01.460383" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://front.serverest.dev/login</arg>
 <arg>wait_until=networkidle</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-08-12T12:34:19.664188" elapsed="2.943811"/>
+<status status="PASS" start="2025-08-12T19:51:58.051349" elapsed="3.409352"/>
 </kw>
 <kw name="Set Browser Timeout" owner="Browser">
 <arg>${old_timeout}</arg>
 <tag>Config</tag>
 <tag>Setter</tag>
 <doc>Sets the timeout used by most input and getter keywords.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.608255" elapsed="0.003555"/>
+<status status="PASS" start="2025-08-12T19:52:01.460986" elapsed="0.003531"/>
 </kw>
-<status status="PASS" start="2025-08-12T12:34:18.400971" elapsed="4.211068"/>
+<status status="PASS" start="2025-08-12T19:51:56.773672" elapsed="4.691092"/>
 </kw>
-<kw name="Given Read data in json file" owner="Variables">
+<kw name="Given Login in application with success" owner="Store">
+<kw name="Read data in json file" owner="Variables">
 <kw name="Count Users" owner="saveFile">
-<msg time="2025-08-12T12:34:22.613899" level="INFO">${qtdIndex} = 1</msg>
+<msg time="2025-08-12T19:52:01.467448" level="INFO">${qtdIndex} = 1</msg>
 <var>${qtdIndex}</var>
-<status status="PASS" start="2025-08-12T12:34:22.613142" elapsed="0.000899"/>
+<status status="PASS" start="2025-08-12T19:52:01.466566" elapsed="0.001456"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.614567" level="INFO">1</msg>
+<msg time="2025-08-12T19:52:01.468640" level="INFO">1</msg>
 <arg>${qtdIndex}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.614203" elapsed="0.000491"/>
+<status status="PASS" start="2025-08-12T19:52:01.468239" elapsed="0.000548"/>
 </kw>
 <kw name="Load Json From File" owner="JSONLibrary">
-<msg time="2025-08-12T12:34:22.615854" level="INFO">${user} = [{'name': 'Nicholas Moore', 'email': 'raymond82@example.org', 'password': 'E%VXd14aMR', 'admin': False}]</msg>
+<msg time="2025-08-12T19:52:01.470048" level="INFO">${user} = [{'name': 'Nicholas Moore', 'email': 'raymond82@example.org', 'password': 'E%VXd14aMR', 'admin': False}]</msg>
 <var>${user}</var>
 <arg>${file}</arg>
 <doc>Load JSON from file.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.614844" elapsed="0.001214"/>
+<status status="PASS" start="2025-08-12T19:52:01.468970" elapsed="0.001277"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.617291" level="INFO">${index} = 0</msg>
+<msg time="2025-08-12T19:52:01.471229" level="INFO">${index} = 0</msg>
 <var>${index}</var>
 <arg>random.randint(0, ${qtdIndex}-1)</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.616368" elapsed="0.001077"/>
+<status status="PASS" start="2025-08-12T19:52:01.470471" elapsed="0.000984"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.618236" level="INFO">0</msg>
+<msg time="2025-08-12T19:52:01.472284" level="INFO">0</msg>
 <arg>${index}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.617717" elapsed="0.000703"/>
+<status status="PASS" start="2025-08-12T19:52:01.471809" elapsed="0.000618"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-12T12:34:22.619865" level="INFO">${name_saved} = Nicholas Moore</msg>
+<msg time="2025-08-12T19:52:01.473822" level="INFO">${name_saved} = Nicholas Moore</msg>
 <var>${name_saved}</var>
 <arg>${user[${index}]}</arg>
 <arg>name</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.618663" elapsed="0.001391"/>
+<status status="PASS" start="2025-08-12T19:52:01.472640" elapsed="0.001321"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-12T12:34:22.621581" level="INFO">${email_saved} = raymond82@example.org</msg>
+<msg time="2025-08-12T19:52:01.474995" level="INFO">${email_saved} = raymond82@example.org</msg>
 <var>${email_saved}</var>
 <arg>${user[${index}]}</arg>
 <arg>email</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.620352" elapsed="0.001493"/>
+<status status="PASS" start="2025-08-12T19:52:01.474164" elapsed="0.000942"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-12T12:34:22.623589" level="INFO">${password_saved} = E%VXd14aMR</msg>
+<msg time="2025-08-12T19:52:01.476175" level="INFO">${password_saved} = E%VXd14aMR</msg>
 <var>${password_saved}</var>
 <arg>${user[${index}]}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.622183" elapsed="0.001568"/>
+<status status="PASS" start="2025-08-12T19:52:01.475276" elapsed="0.001003"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-08-12T12:34:22.625539" level="INFO">${admin_saved} = False</msg>
+<msg time="2025-08-12T19:52:01.477406" level="INFO">${admin_saved} = False</msg>
 <var>${admin_saved}</var>
 <arg>${user[${index}]}</arg>
 <arg>admin</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.624199" elapsed="0.001533"/>
+<status status="PASS" start="2025-08-12T19:52:01.476440" elapsed="0.001103"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.627480" level="INFO">${NAME_SAVE} = Nicholas Moore</msg>
+<msg time="2025-08-12T19:52:01.478929" level="INFO">${NAME_SAVE} = Nicholas Moore</msg>
 <arg>${NAME_SAVE}</arg>
 <arg>${name_saved}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.626037" elapsed="0.001662"/>
+<status status="PASS" start="2025-08-12T19:52:01.477798" elapsed="0.001263"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.629436" level="INFO">${EMAIL_SAVE} = raymond82@example.org</msg>
+<msg time="2025-08-12T19:52:01.480480" level="INFO">${EMAIL_SAVE} = raymond82@example.org</msg>
 <arg>${EMAIL_SAVE}</arg>
 <arg>${email_saved}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.627989" elapsed="0.001647"/>
+<status status="PASS" start="2025-08-12T19:52:01.479237" elapsed="0.001449"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.631258" level="INFO">${PASS_SAVE} = E%VXd14aMR</msg>
+<msg time="2025-08-12T19:52:01.481953" level="INFO">${PASS_SAVE} = E%VXd14aMR</msg>
 <arg>${PASS_SAVE}</arg>
 <arg>${password_saved}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.629907" elapsed="0.001548"/>
+<status status="PASS" start="2025-08-12T19:52:01.480904" elapsed="0.001186"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-08-12T12:34:22.633291" level="INFO">${ADMIN_SAVE} = False</msg>
+<msg time="2025-08-12T19:52:01.483934" level="INFO">${ADMIN_SAVE} = False</msg>
 <arg>${ADMIN_SAVE}</arg>
 <arg>${admin_saved}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.631754" elapsed="0.001767"/>
+<status status="PASS" start="2025-08-12T19:52:01.482277" elapsed="0.002199"/>
 </kw>
-<status status="PASS" start="2025-08-12T12:34:22.612554" elapsed="0.021125"/>
+<status status="PASS" start="2025-08-12T19:52:01.466074" elapsed="0.018725"/>
 </kw>
-<kw name="When SignIn" owner="SignIn">
+<kw name="SignIn" owner="SignIn">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-08-12T12:34:22.691227" level="INFO">Text: 'Login'</msg>
+<msg time="2025-08-12T19:52:01.548172" level="INFO">Text: 'Login'</msg>
 <arg>css=h1.font-robot</arg>
 <arg>equal</arg>
 <arg>Login</arg>
@@ -201,82 +148,143 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.635369" elapsed="0.056589"/>
+<status status="PASS" start="2025-08-12T19:52:01.486118" elapsed="0.063155"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-12T12:34:22.692971" level="INFO">Fills the text 'teste@teste.com' in the given field.</msg>
+<msg time="2025-08-12T19:52:01.550785" level="INFO">Fills the text 'raymond82@example.org' in the given field.</msg>
 <arg>id=email</arg>
 <arg>${email}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.692247" elapsed="0.014565"/>
+<status status="PASS" start="2025-08-12T19:52:01.549741" elapsed="0.023494"/>
 </kw>
 <kw name="Fill Text" owner="Browser">
-<msg time="2025-08-12T12:34:22.708021" level="INFO">Fills the text '123teste' in the given field.</msg>
+<msg time="2025-08-12T19:52:01.574568" level="INFO">Fills the text 'E%VXd14aMR' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${password}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.707172" elapsed="0.012898"/>
+<status status="PASS" start="2025-08-12T19:52:01.573731" elapsed="0.015117"/>
 </kw>
 <kw name="Click" owner="Browser">
-<msg time="2025-08-12T12:34:22.721149" level="INFO">Clicks the element 'css=button &gt;&gt; text=Entrar'.</msg>
+<msg time="2025-08-12T19:52:01.590285" level="INFO">Clicks the element 'css=button &gt;&gt; text=Entrar'.</msg>
 <arg>css=button &gt;&gt; text=Entrar</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.720404" elapsed="0.046958"/>
+<status status="PASS" start="2025-08-12T19:52:01.589244" elapsed="0.054200"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-08-12T12:34:27.768707" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-08-12T19:52:06.645274" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-08-12T12:34:22.767688" elapsed="5.001329"/>
+<status status="PASS" start="2025-08-12T19:52:01.644062" elapsed="5.001519"/>
 </kw>
-<arg>teste@teste.com</arg>
-<arg>123teste</arg>
-<status status="PASS" start="2025-08-12T12:34:22.634289" elapsed="5.134908"/>
+<arg>${EMAIL_SAVE}</arg>
+<arg>${PASS_SAVE}</arg>
+<status status="PASS" start="2025-08-12T19:52:01.485203" elapsed="5.160535"/>
 </kw>
-<kw name="Then Attempt signIn without success" owner="SignIn">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2025-08-12T12:34:27.779206" level="INFO">Waited for Element with selector css=div .alert at state visible</msg>
-<arg>css=div .alert</arg>
-<arg>visible</arg>
-<arg>5</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2025-08-12T12:34:27.770621" elapsed="0.009006"/>
-</kw>
+<kw name="Entry with success" owner="Store">
+<if>
+<branch type="IF" condition="${admin} == True">
 <kw name="Get Text" owner="Browser">
-<msg time="2025-08-12T12:34:27.792913" level="INFO">Text: 'Email e/ou senha inválidos'</msg>
-<arg>css=div .alert &gt; span</arg>
+<arg>css=h1</arg>
 <arg>equals</arg>
-<arg>${output_message}</arg>
+<arg>Bem Vindo ${name}</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-08-12T12:34:27.779895" elapsed="0.013383"/>
+<status status="NOT RUN" start="2025-08-12T19:52:06.647418" elapsed="0.000338"/>
 </kw>
-<arg>Email e/ou senha inválidos</arg>
-<status status="PASS" start="2025-08-12T12:34:27.769840" elapsed="0.023732"/>
+<status status="NOT RUN" start="2025-08-12T19:52:06.646800" elapsed="0.001254"/>
+</branch>
+<branch type="ELSE">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-08-12T19:52:06.670872" level="INFO">Text: 'Serverest Store'</msg>
+<arg>css=h1</arg>
+<arg>equals</arg>
+<arg>Serverest Store</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.648702" elapsed="0.023074"/>
+</kw>
+<status status="PASS" start="2025-08-12T19:52:06.648239" elapsed="0.023796"/>
+</branch>
+<status status="PASS" start="2025-08-12T19:52:06.646756" elapsed="0.025430"/>
+</if>
+<arg>${ADMIN_SAVE}</arg>
+<arg>${NAME_SAVE}</arg>
+<status status="PASS" start="2025-08-12T19:52:06.646039" elapsed="0.026238"/>
+</kw>
+<status status="PASS" start="2025-08-12T19:52:01.465350" elapsed="5.207093"/>
+</kw>
+<kw name="When Add item" owner="Store">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-08-12T19:52:06.688266" level="INFO">Text: 'Logitech MX Vertical'</msg>
+<arg>css=h5 &gt;&gt; text=${product}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.673942" elapsed="0.014609"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-08-12T19:52:06.689851" level="INFO">Clicks the element 'css=.card-body:has(:text("Logitech MX Vertical")) [data-testid="adicionarNaLista"]'.</msg>
+<arg>css=.card-body:has(:text("${product}")) [data-testid="adicionarNaLista"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.688802" elapsed="0.048989"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-08-12T19:52:06.739044" level="INFO">${PRODUCT} = Logitech MX Vertical</msg>
+<arg>${PRODUCT}</arg>
+<arg>${product}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.738291" elapsed="0.000996"/>
+</kw>
+<arg>Logitech MX Vertical</arg>
+<status status="PASS" start="2025-08-12T19:52:06.673084" elapsed="0.066383"/>
+</kw>
+<kw name="Then Validate add item in shop list" owner="Store">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-08-12T19:52:06.756058" level="INFO">Text: 'Lista de Compras'</msg>
+<arg>css=h1 &gt;&gt; text=Lista de Compras</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.740887" elapsed="0.015456"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-08-12T19:52:06.770223" level="INFO">Text: 'Produto:Logitech MX Vertical'</msg>
+<arg>css=[data-testid="shopping-cart-product-name"] &gt;&gt; text=${product}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-08-12T19:52:06.756589" elapsed="0.013913"/>
+</kw>
+<status status="PASS" start="2025-08-12T19:52:06.740073" elapsed="0.030595"/>
 </kw>
 <kw name="Take Screenshot" owner="Browser" type="TEARDOWN">
-<msg time="2025-08-12T12:34:27.963045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-12T19:52:06.865273" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2025-08-12T12:34:27.794387" elapsed="0.169432"/>
+<status status="PASS" start="2025-08-12T19:52:06.771214" elapsed="0.094973"/>
 </kw>
-<msg time="2025-08-12T12:34:27.974529" level="INFO">Switching context to context=44395d5d-c62c-40a4-aa15-dbd957ca703e in CURRENT</msg>
-<msg time="2025-08-12T12:34:27.982265" level="INFO">Successfully changed active context: context=44395d5d-c62c-40a4-aa15-dbd957ca703e</msg>
-<msg time="2025-08-12T12:34:28.031040" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-08-12T12:34:18.400346" elapsed="9.563863"/>
+<msg time="2025-08-12T19:52:06.878527" level="INFO">Switching context to context=6bd764b7-2273-4b48-9053-8d0c6e95afca in CURRENT</msg>
+<msg time="2025-08-12T19:52:06.886744" level="INFO">Successfully changed active context: context=6bd764b7-2273-4b48-9053-8d0c6e95afca</msg>
+<msg time="2025-08-12T19:52:06.943107" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-08-12T19:51:56.772611" elapsed="10.094049"/>
 </test>
-<doc>Teste para acessar a tela inicial da ServeRest no WebApp</doc>
-<status status="PASS" start="2025-08-12T12:34:17.749769" elapsed="10.283164"/>
+<doc>Acoes e elementos da Serverest Store</doc>
+<status status="PASS" start="2025-08-12T19:51:56.122437" elapsed="10.823069"/>
 </suite>
 <statistics>
 <total>
@@ -285,7 +293,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Signin" id="s1" pass="1" fail="0" skip="0">Signin</stat>
+<stat name="Store" id="s1" pass="1" fail="0" skip="0">Store</stat>
 </suite>
 </statistics>
 <errors>

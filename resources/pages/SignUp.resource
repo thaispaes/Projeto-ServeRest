@@ -4,13 +4,13 @@ Documentation        Acoes e elementos da SignUp Page
 Library        Browser
 
 *** Keywords ***
-Validate access to correct page 
+Validate access to signUp page 
     Get Text    css=h2.font-robot >> text=Cadastro
 
 Register
     [Arguments]    ${name}    ${email}    ${password}    ${admin}
 
-    Validate access to correct page
+    Validate access to signUp page
 
     Fill Text    id=nome        ${name}
     Fill Text    id=email       ${email}
@@ -22,6 +22,7 @@ Register
     ELSE
         Click    css=button >> text=Cadastrar  
     END
+    
 
 Validations
     [Arguments]        ${alert}

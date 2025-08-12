@@ -7,6 +7,8 @@ Library        FakerLibrary
 Resource        pages/SignIn.resource
 Resource        pages/Store.resource
 Resource        pages/SignUp.resource
+Resource        pages/ShopList.resource
+Resource        pages/Details.resource
 Resource        Variables.resource
 
 *** Keywords ***

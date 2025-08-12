@@ -21,4 +21,9 @@ Using in the search bar a non-existing product
 Add items in the shop list
     Given Login in application with success
     When Add item    Logitech MX Vertical
-    Then Validate add item in shop list
+    Then Validate add item in shop list    Logitech MX Vertical
+
+Check product details page
+    Given Login in application with success
+    When Find product     Produto X
+    Then Validate product details page    Produto X

@@ -40,9 +40,10 @@ Add item
     Click    css=.card-body:has(:text("${product}")) [data-testid="adicionarNaLista"]
     Set Global Variable    ${PRODUCT}    ${product}
 
-Validate add item in shop list
-    Get Text    css=h1 >> text=Lista de Compras
-    Get Text    css=[data-testid="shopping-cart-product-name"] >> text=${product}
+Find product
+    [Arguments]    ${product}
+    Get Text    css=h5 >> text=${product}
+    Click    css=.card-body:has(:text("${product}")) >> .card-link
 
 
 

@@ -1,83 +1,77 @@
-{"level":30,"time":"2025-08-11T19:32:22.271Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Listening on 127.0.0.1:51301"}
-(node:28592) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+{"level":30,"time":"2025-08-12T15:15:07.147Z","pid":14192,"hostname":"ThaisPaes","msg":"Listening on 127.0.0.1:51458"}
+(node:14192) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-{"level":30,"time":"2025-08-11T19:32:22.417Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2025-08-11T19:32:25.227Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Adding browser to stack: chromium, version: 139.0.7258.5"}
-{"level":30,"time":"2025-08-11T19:32:25.228Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method newBrowser"}
-{"level":30,"time":"2025-08-11T19:32:25.227Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2025-08-11T19:32:25.251Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method newPage"}
-{"level":30,"time":"2025-08-11T19:32:25.252Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@681d2ee2532bb77554bee0176bb4e8c4\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=073cbb0a-4d4b-4090-89b0-4a8d4762d866\"}"}
-{"level":30,"time":"2025-08-11T19:32:25.278Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Setting default timeout for context context=ad6541e0-2c7f-44a0-a3cc-c77154741a49 to 10000"}
-{"level":30,"time":"2025-08-11T19:32:25.279Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=ad6541e0-2c7f-44a0-a3cc-c77154741a49"}
-{"level":30,"time":"2025-08-11T19:32:27.208Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Video path: undefined"}
-{"level":30,"time":"2025-08-11T19:32:27.209Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active page"}
-{"level":30,"time":"2025-08-11T19:32:37.223Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  newPage"}
 ================= Original suppressed error =================
-page.goto: Timeout 10000ms exceeded.
-Call log:
-[2m  - navigating to "https://front.serverest.dev/login", waiting until "domcontentloaded"[22m
-
-    at newPage (C:\Python\Lib\site-packages\Browser\wrapper\index.js:12572:18)
-    at async PlaywrightServer.newPage (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:28) {
-  name: 'TimeoutError'
-}
-=============================================================
-{"level":30,"time":"2025-08-11T19:32:37.229Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
-================= Original suppressed error =================
-Error: Tried to take screenshot, but no page was open.
-    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
-    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
-    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
-    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
-    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
-    at ServerHttp2Stream.emit (node:events:536:35)
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js:12226:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js:13122:59)
+    at PlaywrightServer.setTimeout (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\index.js:13370:57)
+    at Object.onReceiveHalfClose (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\thais\anaconda3\envs\projects-robotframework\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
     at endReadableNT (node:internal/streams/readable:1698:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
 =============================================================
-{"level":30,"time":"2025-08-11T19:32:37.230Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
-{"level":30,"time":"2025-08-11T19:32:37.358Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
-================= Original suppressed error =================
-Error: Tried to take screenshot, but no page was open.
-    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
-    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
-    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
-    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
-    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
-    at ServerHttp2Stream.emit (node:events:536:35)
-    at endReadableNT (node:internal/streams/readable:1698:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
-=============================================================
-{"level":30,"time":"2025-08-11T19:32:37.359Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
-{"level":30,"time":"2025-08-11T19:32:37.365Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method takeScreenshot"}
-================= Original suppressed error =================
-Error: Tried to take screenshot, but no page was open.
-    at exists (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10725:11)
-    at takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:10769:3)
-    at PlaywrightServer.takeScreenshot (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13137:34)
-    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
-    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
-    at ServerHttp2Stream.emit (node:events:536:35)
-    at endReadableNT (node:internal/streams/readable:1698:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
-=============================================================
-{"level":30,"time":"2025-08-11T19:32:37.366Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Error of node method  takeScreenshot"}
-{"level":30,"time":"2025-08-11T19:32:37.409Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.409Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.414Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.414Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.418Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.418Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.424Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.424Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.428Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Changed active context: context=ad6541e0-2c7f-44a0-a3cc-c77154741a49"}
-{"level":30,"time":"2025-08-11T19:32:37.430Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeContext"}
-{"level":30,"time":"2025-08-11T19:32:37.448Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method closeContext"}
-{"level":30,"time":"2025-08-11T19:32:37.465Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:37.466Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2025-08-11T19:32:39.622Z","pid":28592,"hostname":"c11-pxxzoqftqrj","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-08-12T15:15:07.506Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-08-12T15:15:07.725Z","pid":14192,"hostname":"ThaisPaes","msg":"Adding browser to stack: chromium, version: 138.0.7204.23"}
+{"level":30,"time":"2025-08-12T15:15:07.726Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-08-12T15:15:07.726Z","pid":14192,"hostname":"ThaisPaes","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-08-12T15:15:07.733Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-08-12T15:15:07.734Z","pid":14192,"hostname":"ThaisPaes","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-08-12T15:15:07.749Z","pid":14192,"hostname":"ThaisPaes","msg":"Changed active context"}
+{"level":30,"time":"2025-08-12T15:15:07.893Z","pid":14192,"hostname":"ThaisPaes","msg":"Video path: undefined"}
+{"level":30,"time":"2025-08-12T15:15:07.893Z","pid":14192,"hostname":"ThaisPaes","msg":"Changed active page"}
+{"level":30,"time":"2025-08-12T15:15:10.688Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method newPage"}
+{"level":30,"time":"2025-08-12T15:15:10.700Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method click"}
+{"level":30,"time":"2025-08-12T15:15:10.700Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=a.btn >> text=Cadastre-se in page."}
+{"level":30,"time":"2025-08-12T15:15:10.754Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method click"}
+{"level":30,"time":"2025-08-12T15:15:10.761Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:10.761Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=h2.font-robot >> text=Cadastro in page."}
+{"level":30,"time":"2025-08-12T15:15:10.791Z","pid":14192,"hostname":"ThaisPaes","msg":"Retrieved text for element css=h2.font-robot >> text=Cadastro containing Cadastro"}
+{"level":30,"time":"2025-08-12T15:15:10.791Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:10.820Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:10.820Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=h2.font-robot >> text=Cadastro in page."}
+{"level":30,"time":"2025-08-12T15:15:10.834Z","pid":14192,"hostname":"ThaisPaes","msg":"Retrieved text for element css=h2.font-robot >> text=Cadastro containing Cadastro"}
+{"level":30,"time":"2025-08-12T15:15:10.834Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:10.840Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.840Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with id=nome in page."}
+{"level":30,"time":"2025-08-12T15:15:10.851Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.857Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.857Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2025-08-12T15:15:10.868Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.874Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.874Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2025-08-12T15:15:10.885Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method fillText"}
+{"level":30,"time":"2025-08-12T15:15:10.892Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method click"}
+{"level":30,"time":"2025-08-12T15:15:10.892Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=button >> text=Cadastrar in page."}
+{"level":30,"time":"2025-08-12T15:15:10.933Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method click"}
+{"level":30,"time":"2025-08-12T15:15:10.937Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-08-12T15:15:10.937Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=div .alert in page."}
+{"level":30,"time":"2025-08-12T15:15:11.762Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-08-12T15:15:11.767Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:11.767Z","pid":14192,"hostname":"ThaisPaes","msg":"Strict mode is enabled, find Locator with css=div .alert > span in page."}
+{"level":30,"time":"2025-08-12T15:15:11.778Z","pid":14192,"hostname":"ThaisPaes","msg":"Retrieved text for element css=div .alert > span containing Password é obrigatório"}
+{"level":30,"time":"2025-08-12T15:15:11.778Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getText"}
+{"level":30,"time":"2025-08-12T15:15:11.785Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-08-12T15:15:11.785Z","pid":14192,"hostname":"ThaisPaes","Take screenshot with options: ":{"path":"D:\\codigos\\GitHub\\projeto-serverest\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-08-12T15:15:11.958Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-08-12T15:15:11.962Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.964Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.965Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.966Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.968Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.968Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.970Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.971Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:11.974Z","pid":14192,"hostname":"ThaisPaes","msg":"Changed active context"}
+{"level":30,"time":"2025-08-12T15:15:11.974Z","pid":14192,"hostname":"ThaisPaes","msg":"Changing current active page: page=fdf56f32-7328-493d-b026-c896427698da"}
+{"level":30,"time":"2025-08-12T15:15:11.974Z","pid":14192,"hostname":"ThaisPaes","msg":"Changed active page"}
+{"level":30,"time":"2025-08-12T15:15:11.977Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method closeContext"}
+{"level":30,"time":"2025-08-12T15:15:11.989Z","pid":14192,"hostname":"ThaisPaes","msg":"Removed page=61f55fe2-5f4e-4319-9550-7a0b467e8163 from context=99377b92-1c40-4056-b40d-7f31bc4f1372 page stack"}
+{"level":30,"time":"2025-08-12T15:15:12.024Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method closeContext"}
+{"level":30,"time":"2025-08-12T15:15:12.033Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:12.033Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-08-12T15:15:14.125Z","pid":14192,"hostname":"ThaisPaes","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-08-12T15:15:14.231Z","pid":14192,"hostname":"ThaisPaes","msg":"End of node method closeAllBrowsers"}

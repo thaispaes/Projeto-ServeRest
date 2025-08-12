@@ -16,5 +16,11 @@
         "email": "ewallace@example.net",
         "password": "1#VM6ne4_@",
         "admin": true
+    },
+    {
+        "name": "Monica Bell",
+        "email": "melissa89@example.org",
+        "password": "+jbm0_Od70",
+        "admin": true
     }
 ]

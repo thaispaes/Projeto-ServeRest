@@ -2,6 +2,7 @@
 Documentation        Arquivo principal das keywords bases do projeto 
 
 Library        Browser
+Library        FakerLibrary
 
 Resource        pages/SignIn.resource
 Resource        pages/Store.resource

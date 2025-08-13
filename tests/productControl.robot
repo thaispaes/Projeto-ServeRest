@@ -17,5 +17,5 @@ ${picture}    D:/codigos/GitHub/projeto-serverest/resources/assets
 Create an product with success
     Given Login in application with success
     When Access register products
-    And Create product    ${product_name}    ${price}    ${description}    ${quantity}    ${picture}
+    And Create product    ${product_name}    ${price}    ${description}    ${quantity}    ${picture}     #Nao esta fazendo upload
     Then Validate product created    ${product_name}

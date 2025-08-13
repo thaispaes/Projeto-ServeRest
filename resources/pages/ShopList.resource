@@ -14,3 +14,13 @@ Validate add item in shop list
 
 Clear shop list with success
     Click    css=[data-testid="limparLista"]
+
+Add quantity in item
+    [Arguments]    ${product}
+    Get Text    css=[data-testid="shopping-cart-product-name"] >> text=${product}
+    Click    css=.card-body:has(:text("${product}")) [data-testid="product-increase-quantity"]
+
+Remove quantity in item
+    [Arguments]    ${product}
+    Get Text    css=[data-testid="shopping-cart-product-name"] >> text=${product}
+    Click    css=.card-body:has(:text("${product}")) [data-testid="product-decrease-quantity"]

@@ -16,10 +16,6 @@ Entry with success
         Get Text    css=h1    equals    Serverest Store    
     END
     
-Login in application with success
-    Read data in json file    
-    SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
-    Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
 
 Fill search bar and click to find the product
     [Arguments]    ${product}

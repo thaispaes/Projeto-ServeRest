@@ -6,23 +6,27 @@ Resource        ../resources/base.resource
 Test Setup    Start session
 Test Teardown    Take Screenshot
 
+*** Variables ***
+${PRODUCT_1}    Processador Intel I5 12400F
+${PRODUCT_2}    Logitech MX Vertical
+
 *** Test Cases ***
 Add amount in a product 
     Given Login in application with success
-    When Add item    Processador Intel I5 12400F
-    And Validate add item in shop list    Processador Intel I5 12400F
-    Then Add quantity in item     Processador Intel I5 12400F
+    When Add item    ${PRODUCT_1}
+    And Validate add item in shop list    ${PRODUCT_1}
+    Then Add quantity in item     ${PRODUCT_1}
 
 Remove amount in the product
     Given Login in application with success
-    When Add item    Logitech MX Vertical
-    And Validate add item in shop list    Logitech MX Vertical
-    And Add quantity in item    Logitech MX Vertical
-    Then Remove quantity in item    Logitech MX Vertical
+    When Add item    ${PRODUCT_2}
+    And Validate add item in shop list    ${PRODUCT_2}
+    And Add quantity in item    ${PRODUCT_2}
+    Then Remove quantity in item    ${PRODUCT_2}
 
 Clear shop list 
     Given Login in application with success
-    When Add item    Processador Intel I5 12400F
-    And Validate add item in shop list    Processador Intel I5 12400F
+    When Add item    ${PRODUCT_1}
+    And Validate add item in shop list    ${PRODUCT_1}
     Then Clear shop list with success
 

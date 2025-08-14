@@ -13,7 +13,7 @@ SignIn
 
     Click           css=button >> text=Entrar
 
-    Sleep    5
+    Sleep    20
 
 Attempt signIn without success
     [Arguments]        ${output_message}

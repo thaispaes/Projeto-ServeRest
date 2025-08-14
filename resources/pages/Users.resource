@@ -24,6 +24,9 @@ Register user
         Click    css=button >> text=Cadastrar  
     END
 
+    Save data in json file
+    Sleep    20
+
     Set Suite Variable    ${NAME_CREATED}    ${name}
 
 Validate register with success

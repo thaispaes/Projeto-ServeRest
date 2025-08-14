@@ -7,11 +7,11 @@ Test Setup    Start session
 Test Teardown    Take Screenshot
 
 *** Variables ***
-${product_name}    BL Fone de Ouvido sem Fio
+${product_name}    JBL Sem Fio
 ${price}    224
-${description}    BL Fone de Ouvido sem Fio Tune 520BT Dobrável Bateria 57h
+${description}    JBL Fone de Ouvido sem Fio Tune 520BT Dobrável Bateria 57h
 ${quantity}    10
-${picture}    D:/codigos/GitHub/projeto-serverest/resources/assets
+${picture}    C:${/}Users${/}thais.regina.santos${/}OneDrive - Accenture${/}Documents${/}GitHub${/}Projeto-ServeRest${/}resources${/}assets${/}fone-picture.jpg
 
 *** Test Cases ***
 Create an product with success

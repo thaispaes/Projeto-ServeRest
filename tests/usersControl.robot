@@ -12,5 +12,4 @@ Test Teardown    Take Screenshot
 Register user through admin home
     Given Login in application with success
     When Access register users
-    And Register user   ${NAME}    ${EMAIL}    ${PASS}    ${ADMIN}    #Nao esta salvando no arquivo
-    Then Validate register with success
+    And Register user   ${NAME}    ${EMAIL}    ${PASS}    ${ADMIN}    

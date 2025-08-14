@@ -1,8 +1,26 @@
 [
     {
-        "name": "Timothy Riley",
-        "email": "krobinson@example.net",
-        "password": "ZGH%Zfdw$6",
+        "name": "Heather Medina",
+        "email": "avillanueva@example.com",
+        "password": "oHbSN7uw(5",
+        "admin": false
+    },
+    {
+        "name": "Thomas Zavala",
+        "email": "lsherman@example.org",
+        "password": "PDh4SZjvi+",
+        "admin": false
+    },
+    {
+        "name": "Kimberly Brooks",
+        "email": "gentrymaria@example.net",
+        "password": "BZZiQ7qn+1",
+        "admin": false
+    },
+    {
+        "name": "Albert Camacho",
+        "email": "zjones@example.net",
+        "password": "&$N^jGk85P",
         "admin": true
     }
 ]

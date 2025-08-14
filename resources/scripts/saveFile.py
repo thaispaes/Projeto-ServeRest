@@ -32,8 +32,7 @@ def Count_users(arquivo_json="users.json"):
     
     
 def Find_admin_user(find_admin, arquivo_json="users.json"):
-    admin_users = {}
-    users = {}
+    users = []
     
     if find_admin:
         try:
@@ -46,9 +45,14 @@ def Find_admin_user(find_admin, arquivo_json="users.json"):
     
         for user in users:
             if user.get("admin") == True:
-                return user
+                
+                return {
+                        "name": user.get("name"),
+                        "email":user.get("email"),
+                        "password":user.get("password")
+                        }
             
-        if not admin_users:
+        if not user:
             print("Nenhum usuario admin encontrado")
             return False
 

@@ -3,6 +3,7 @@ Documentation        Arquivo principal das keywords bases do projeto
 
 Library        Browser
 Library        FakerLibrary
+Library        JSONLibrary
 
 Resource        pages/SignIn.resource
 Resource        pages/Store.resource
@@ -24,3 +25,12 @@ Login in application with success
     Read data in json file    
     SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
     Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
+
+Teste admin
+    ${ADMIN_USER}=    Find Admin User    True
+
+    ${admin_name}    Get From Dictionary    ${ADMIN_USER}    name
+    ${admin_email}    Get From Dictionary    ${ADMIN_USER}    email
+    ${admin_pass}    Get From Dictionary    ${ADMIN_USER}    password
+
+    Log    ${admin_name},${admin_email},${admin_pass}

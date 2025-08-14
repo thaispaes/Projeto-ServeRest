@@ -13,3 +13,6 @@ Register user through admin home
     Given Login in application with success
     When Access register users
     And Register user   ${NAME}    ${EMAIL}    ${PASS}    ${ADMIN}    
+
+Teste admin
+    Teste admin

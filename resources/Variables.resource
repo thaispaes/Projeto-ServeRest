@@ -35,8 +35,6 @@ Save data in json file
 
 Read data in json file
     ${qtdIndex}=    Count_users
-    Log    ${qtdIndex}
-
     ${user}    Load Json From File    ${file}
     ${index}=     Evaluate    random.randint(0, ${qtdIndex}-1)    random
     Log    ${index}

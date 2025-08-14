@@ -1,5 +1,11 @@
 [
     {
+        "name": "Timothy Riley",
+        "email": "krobinson@example.net",
+        "password": "ZGH%Zfdw$6",
+        "admin": true
+    },
+    {
         "name": "Heather Medina",
         "email": "avillanueva@example.com",
         "password": "oHbSN7uw(5",
@@ -21,6 +27,12 @@
         "name": "Albert Camacho",
         "email": "zjones@example.net",
         "password": "&$N^jGk85P",
+        "admin": true
+    },
+    {
+        "name": "Patricia Garner",
+        "email": "uhernandez@example.net",
+        "password": "+!74V4pvly",
         "admin": true
     }
 ]

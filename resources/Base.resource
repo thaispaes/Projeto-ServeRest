@@ -22,16 +22,24 @@ Start session
     Set Browser Timeout    ${old_timeout}
 
 Login in application with success
-    Read data in json file
-    SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
-    Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
-
-Find admin user to login
     [Arguments]    ${IS_ADMIN}
-    ${ADMIN_USER}=    Find Admin User    ${IS_ADMIN}
+    IF    ${IS_ADMIN} == True
+        Find admin user to login
+        SignIn    ${ADMIN_EMAIL}    ${ADMIN_PASS} 
+        Entry with success    True    ${ADMIN_NAME}
+    ELSE
+        Read data in json file
+        SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
+        Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
+    END
+    
+Find admin user to login
+    ${ADMIN_USER}=    Find Admin User
 
     ${admin_name}    Get From Dictionary    ${ADMIN_USER}    name
     ${admin_email}    Get From Dictionary    ${ADMIN_USER}    email
     ${admin_pass}    Get From Dictionary    ${ADMIN_USER}    password
 
-    Log    ${admin_name},${admin_email},${admin_pass}
+    Set Suite Variable    ${ADMIN_EMAIL}    ${admin_email}
+    Set Suite Variable    ${ADMIN_NAME}    ${admin_name}
+    Set Suite Variable    ${ADMIN_PASS}    ${admin_pass}

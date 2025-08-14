@@ -31,30 +31,29 @@ def Count_users(arquivo_json="users.json"):
     return qtdIndexs
     
     
-def Find_admin_user(find_admin, arquivo_json="users.json"):
+def Find_admin_user(arquivo_json="users.json"):
     users = []
     
-    if find_admin:
-        try:
-            with open(arquivo_json, "r", encoding="utf-8") as file:
-                users = json.load(file)
+    try:
+        with open(arquivo_json, "r", encoding="utf-8") as file:
+            users = json.load(file)
         
-        except  (FileNotFoundError, json.JSONDecodeError):
-            print("Arquivo nao encontrado ou vazio")
-            return 
+    except  (FileNotFoundError, json.JSONDecodeError):
+        print("Arquivo nao encontrado ou vazio")
+        return 
     
-        for user in users:
-            if user.get("admin") == True:
+    for user in users:
+        if user.get("admin") == True:
                 
-                return {
-                        "name": user.get("name"),
-                        "email":user.get("email"),
-                        "password":user.get("password")
-                        }
+            return {
+                "name": user.get("name"),
+                "email":user.get("email"),
+                "password":user.get("password")
+            }
             
-        if not user:
-            print("Nenhum usuario admin encontrado")
-            return False
+    if not user:
+        print("Nenhum usuario admin encontrado")
+        return False
 
         
     

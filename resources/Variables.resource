@@ -16,6 +16,8 @@ ${email}
 ${password}
 ${admin}
 ${file}    users.json
+${IS_NOT_ADMIN}    False
+${IS_ADMIN}    True
 
 *** Keywords ***
 Generate fake data

@@ -22,12 +22,13 @@ Start session
     Set Browser Timeout    ${old_timeout}
 
 Login in application with success
-    Read data in json file    
+    Read data in json file
     SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
     Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
 
-Teste admin
-    ${ADMIN_USER}=    Find Admin User    True
+Find admin user to login
+    [Arguments]    ${IS_ADMIN}
+    ${ADMIN_USER}=    Find Admin User    ${IS_ADMIN}
 
     ${admin_name}    Get From Dictionary    ${ADMIN_USER}    name
     ${admin_email}    Get From Dictionary    ${ADMIN_USER}    email

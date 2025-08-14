@@ -29,8 +29,8 @@ Login in application with success
         Entry with success    True    ${ADMIN_NAME}
     ELSE
         Read data in json file
-        SignIn    ${EMAIL_SAVE}    ${PASS_SAVE}
-        Entry with success    ${ADMIN_SAVE}    ${NAME_SAVE}
+        SignIn    ${EMAIL_SAVED}    ${PASS_SAVED}
+        Entry with success    ${ADMIN_SAVED}    ${NAME_SAVED}
     END
     
 Find admin user to login

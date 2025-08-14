@@ -11,13 +11,13 @@ Access register users
     Click    css=[data-testid="cadastrarUsuarios"]    
 
 Register user
-    [Arguments]    ${name}    ${email}    ${password}    ${admin}
+    [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}
 
-    Fill Text    id=nome        ${name}
-    Fill Text    id=email       ${email}
-    Fill Text    id=password    ${password}
+    Fill Text    id=nome        ${NAME}
+    Fill Text    id=email       ${EMAIL}
+    Fill Text    id=password    ${PASSWORD}
 
-    IF   ${admin} == True
+    IF   ${ADMIN} == True
         Click    css=input#administrador
         Click    css=button >> text=Cadastrar
     ELSE
@@ -27,7 +27,7 @@ Register user
     Save data in json file
     Sleep    20
 
-    Set Suite Variable    ${NAME_CREATED}    ${name}
+    Set Suite Variable    ${NAME_CREATED}    ${NAME}
 
 Validate register with success
     Get Text    css=h1    equals    Lista dos usuários

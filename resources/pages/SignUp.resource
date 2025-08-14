@@ -8,15 +8,15 @@ Validate access to signUp page
     Get Text    css=h2.font-robot >> text=Cadastro
 
 Register
-    [Arguments]    ${name}    ${email}    ${password}    ${admin}
+    [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}
 
     Validate access to signUp page
 
-    Fill Text    id=nome        ${name}
-    Fill Text    id=email       ${email}
-    Fill Text    id=password    ${password}
+    Fill Text    id=nome        ${NAME}
+    Fill Text    id=email       ${EMAIL}
+    Fill Text    id=password    ${PASSWORD}
 
-    IF   ${admin} == True
+    IF   ${ADMIN} == True
         Click    css=input#administrador
         Click    css=button >> text=Cadastrar
     ELSE
@@ -25,18 +25,18 @@ Register
     
 
 Validations
-    [Arguments]        ${alert}
+    [Arguments]        ${ALERT}
 
     Wait For Elements State    
     ...    css=div .alert
     ...    visible     5
     
-    Get Text    css=div .alert > span    equals    ${alert}
+    Get Text    css=div .alert > span    equals    ${ALERT}
 
 Attempt signUp
-  [Arguments]    ${name}    ${email}    ${password}    ${admin}    ${output_message}
+  [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}    ${OUTPUT_MSG}
 
 
-   Register                    ${name}    ${email}    ${password}    ${admin}
-   Validations           ${output_message}   
+   Register                    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}
+   Validations           ${OUTPUT_MSG}   
 

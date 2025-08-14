@@ -6,5 +6,5 @@ Library        Browser
 *** Keywords ***
 
 Validate product details page
-    [Arguments]    ${product}
-    Get Text    css=[data-testid="product-detail-name"] >> text=${product}
+    [Arguments]    ${PRODUCT_NAME}
+    Get Text    css=[data-testid="product-detail-name"] >> text=${PRODUCT_NAME}

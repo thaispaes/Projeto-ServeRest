@@ -5,24 +5,24 @@ Library        Browser
 
 *** Keywords ***
 SignIn
-    [Arguments]        ${email}    ${password}
+    [Arguments]        ${EMAIL}    ${PASSWORD}
     Get Text        css=h1.font-robot    equal     Login
 
-    Fill Text       id=email        ${email}
-    Fill Text       id=password     ${password}
+    Fill Text       id=email        ${EMAIL}
+    Fill Text       id=password     ${PASSWORD}
 
     Click           css=button >> text=Entrar
 
-    Sleep    20
+    Sleep    5
 
 Attempt signIn without success
-    [Arguments]        ${output_message}
+    [Arguments]        ${OUTPUT_MESSAGE}
 
     Wait For Elements State    
     ...    css=div .alert
     ...    visible     5
     
-    Get Text    css=div .alert > span    equals    ${output_message}
+    Get Text    css=div .alert > span    equals    ${OUTPUT_MESSAGE}
 
 Access to signUp page
     Click    css=a.btn >> text=Cadastre-se

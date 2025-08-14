@@ -2,54 +2,67 @@
 Documentation    Arquivo de variaveis 
 
 Library    FakerLibrary
-Library    OperatingSystem
 Library    JSONLibrary
 Library    Collections
-Library    BuiltIn
 
 Library    ./scripts/saveFile.py
 
 
 *** Variables ***
-${name}
-${email}
-${password}
-${admin}
-${file}    users.json
+${FAKE_NAME}
+${FAKE_EMAIL}
+${FAKE_PASS}
+${ADMIN_FLAG}
+${JSON_FILE}    users.json
+
+## Admin Validations
 ${IS_NOT_ADMIN}    False
 ${IS_ADMIN}    True
 
+## Product Control File
+${PRODUCT_NAME}    JBL Sem Fio
+${PRICE}    224
+${DESCRIPTION}    JBL Fone de Ouvido sem Fio Tune 520BT Dobrável Bateria 57h
+${QUANTITY}    10
+${PICTURE}    C:${/}Users${/}thais.regina.santos${/}OneDrive - Accenture${/}Documents${/}GitHub${/}Projeto-ServeRest${/}resources${/}assets${/}fone-picture.jpg
+
+${PRODUCT_1}    Processador Intel I5 12400F
+${PRODUCT_2}    Logitech MX Vertical
+
 *** Keywords ***
 Generate fake data
-    ${name}    FakerLibrary.Name
-    ${email}    FakerLibrary.Email
-    ${password}    FakerLibrary.Password
-    ${admin}    FakerLibrary.Boolean
+    ${FAKE_NAME}    FakerLibrary.Name
+    ${FAKE_EMAIL}    FakerLibrary.Email
+    ${FAKE_PASS}    FakerLibrary.Password
+    ${ADMIN_FLAG}    FakerLibrary.Boolean
 
-    Set Global Variable    ${NAME}    ${name}
-    Set Global Variable    ${EMAIL}    ${email}
-    Set Global Variable    ${PASS}    ${password}
-    Set Global Variable    ${ADMIN}    ${admin}
+    Set Global Variable    ${NAME}    ${FAKE_NAME}
+    Set Global Variable    ${EMAIL}    ${FAKE_EMAIL}
+    Set Global Variable    ${PASS}    ${FAKE_PASS}
+    Set Global Variable    ${ADMIN}    ${ADMIN_FLAG}
 
 Save data in json file
     ${ACCOUNT}=    Create Dictionary    name=${NAME}    email=${EMAIL}    password=${PASS}    admin=${ADMIN}
     Save_users    ${ACCOUNT}
 
 Read data in json file
-    ${qtdIndex}=    Count_users
-    ${user}    Load Json From File    ${file}
-    ${index}=     Evaluate    random.randint(0, ${qtdIndex}-1)    random
-    Log    ${index}
+    ${QTD_INDEX}=    Count_users
+    ${USER}    Load Json From File    ${JSON_FILE}
+    ${INDEX}=     Evaluate    random.randint(0, ${QTD_INDEX}-1)    random
+    Log    ${INDEX}
 
-    ${name_saved}    Get From Dictionary    ${user[${index}]}    name
-    ${email_saved}    Get From Dictionary    ${user[${index}]}    email
-    ${password_saved}    Get From Dictionary    ${user[${index}]}    password
-    ${admin_saved}    Get From Dictionary    ${user[${index}]}    admin
+    ${NAME_SAVE_IN_JSON}    Get From Dictionary    ${USER[${INDEX}]}    name
+    ${EMAIL_SAVE_IN_JSON}    Get From Dictionary    ${USER[${INDEX}]}    email
+    ${PASS_SAVE_IN_JSON}    Get From Dictionary    ${USER[${INDEX}]}    password
+    ${FLAG_SAVE_IN_JSON}    Get From Dictionary    ${USER[${INDEX}]}    admin
 
 
-    Set Global Variable    ${NAME_SAVE}    ${name_saved}
-    Set Global Variable    ${EMAIL_SAVE}    ${email_saved}
-    Set Global Variable    ${PASS_SAVE}    ${password_saved}
-    Set Global Variable    ${ADMIN_SAVE}    ${admin_saved}
+    Set Global Variable    ${NAME_SAVED}    ${NAME_SAVE_IN_JSON}
+    Set Global Variable    ${EMAIL_SAVED}    ${EMAIL_SAVE_IN_JSON}
+    Set Global Variable    ${PASS_SAVED}    ${PASS_SAVE_IN_JSON}
+    Set Global Variable    ${ADMIN_SAVED}    ${FLAG_SAVE_IN_JSON}
 
-    
+Save product
+    [Arguments]    ${PRODUCT_NAME}
+
+    Set Global Variable    ${PRODUCT}    ${PRODUCT_NAME}

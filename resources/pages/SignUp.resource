@@ -4,9 +4,11 @@ Documentation        Acoes e elementos da SignUp Page
 Library        Browser
 
 *** Keywords ***
+#Valida que acessou a pagina de cadastro
 Validate access to signUp page 
     Get Text    css=h2.font-robot >> text=Cadastro
 
+#Keyword responsável por realizar o cadastro de usuário 
 Register
     [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}
 
@@ -23,7 +25,7 @@ Register
         Click    css=button >> text=Cadastrar  
     END
     
-
+#Essa keyword faz a validação das mensagems de alerta caso não preencha os dados corretamente
 Validations
     [Arguments]        ${ALERT}
 
@@ -33,6 +35,7 @@ Validations
     
     Get Text    css=div .alert > span    equals    ${ALERT}
 
+#Keyword responsável por validar caso não os campos não sejam preenchidos
 Attempt signUp
   [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}    ${OUTPUT_MSG}
 

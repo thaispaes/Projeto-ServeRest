@@ -15,12 +15,14 @@ Resource        pages/Product.resource
 Resource        Variables.resource
 
 *** Keywords ***
+#Inicia sessão do browser
 Start session 
     ${old_timeout}=    Set Browser Timeout    2 minutes
     New Browser     browser=chromium    headless=False    args=["--start-maximized"]
     New Page        https://front.serverest.dev/login    wait_until=networkidle
     Set Browser Timeout    ${old_timeout}
 
+#Usado para logar de forma mais rapida na aplicação, ela valida se o usuario que quer logar é admin ou não e faz o acesso 
 Login in application with success
     [Arguments]    ${IS_ADMIN}
     IF    ${IS_ADMIN} == True
@@ -32,7 +34,8 @@ Login in application with success
         SignIn    ${EMAIL_SAVED}    ${PASS_SAVED}
         Entry with success    ${ADMIN_SAVED}    ${NAME_SAVED}
     END
-    
+
+#Procura por usuários com a flag ADMIN e retorna eles para utilização
 Find admin user to login
     ${ADMIN_USER}=    Find Admin User
 

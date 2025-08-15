@@ -4,6 +4,8 @@ Documentation        Acoes e elementos da Login Page
 Library        Browser
 
 *** Keywords ***
+
+#Keyword responsável por fazer login com sucesso na aplicação 
 SignIn
     [Arguments]        ${EMAIL}    ${PASSWORD}
     Get Text        css=h1.font-robot    equal     Login
@@ -15,6 +17,7 @@ SignIn
 
     Sleep    5
 
+#Valida as mensagens de alerta quando preenchemos um campo incorretamente 
 Attempt signIn without success
     [Arguments]        ${OUTPUT_MESSAGE}
 
@@ -24,6 +27,7 @@ Attempt signIn without success
     
     Get Text    css=div .alert > span    equals    ${OUTPUT_MESSAGE}
 
+#Responsável por seguir para pagina de cadastro de usuários
 Access to signUp page
     Click    css=a.btn >> text=Cadastre-se
  

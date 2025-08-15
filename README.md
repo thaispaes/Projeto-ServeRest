@@ -26,7 +26,7 @@
 
 ## 🚀 Sobre o projeto
 
-Com o intuíto de aprender mais sobre automação de testes, o projeto foi criado usando um site <em>Open source</em> chamado <a href="https://front.serverest.dev/login">ServeRest</a> que é um site criado especialmente para estudantes implementarem teste automatizados e adquirirem mais experiências no assunto.
+Com o intuíto de aprender mais sobre automação de testes, o projeto foi criado usando um site <em>Open source</em> chamado <a href="https://front.serverest.dev/login">ServeRest</a> que é um site criado especialmente para estudantes implementarem testes automatizados e adquirirem mais experiências no assunto.
 
 ## 🔧 Como usar
 

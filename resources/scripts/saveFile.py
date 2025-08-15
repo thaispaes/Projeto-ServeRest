@@ -1,6 +1,7 @@
 import json
 import os
 
+#Função responsável por salvar os usuários criados no json "users"
 def Save_users(new_user, arquivo_json="users.json"):
     users = []
     
@@ -11,11 +12,11 @@ def Save_users(new_user, arquivo_json="users.json"):
             except json.JSONDecoderError:
                 users = []
     
-    users.append(new_user)
+    users.append(new_user) #Salva o novo usuário na lista de dicionários
     with open(arquivo_json, "w", encoding="UTF-8") as file:
-        json.dump(users, file, ensure_ascii=False, indent=4)
+        json.dump(users, file, ensure_ascii=False, indent=4) #Salva o usuário no arquivo "users" no formato json
         
-    
+#Responsável por pegar a quantidade de usuários no arquivo, contar e retornar quantos estão salvos  
 def Count_users(arquivo_json="users.json"):
     users = []
     
@@ -30,7 +31,7 @@ def Count_users(arquivo_json="users.json"):
     qtdIndexs = len(users)
     return qtdIndexs
     
-    
+#Procura dentro do arquivo de usuários qual o primeiro usuário da lista que é admin e retorna os seus dados
 def Find_admin_user(arquivo_json="users.json"):
     users = []
     

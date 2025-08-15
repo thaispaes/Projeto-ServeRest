@@ -5,11 +5,15 @@ Library        Browser
 
 Resource    ../Variables.resource
 
-*** Keywords ***
+*** Variables ***
+${NAME_CREATED}
 
+*** Keywords ***
+#Valida que acessou a pagina de cadastro
 Access register users
     Click    css=[data-testid="cadastrarUsuarios"]    
 
+#Keyword responsável por realizar o cadastro de usuário 
 Register user
     [Arguments]    ${NAME}    ${EMAIL}    ${PASSWORD}    ${ADMIN}
 
@@ -29,6 +33,7 @@ Register user
 
     Set Suite Variable    ${NAME_CREATED}    ${NAME}
 
+#Valida se o usuario foi criado com sucesso
 Validate register with success
     Get Text    css=h1    equals    Lista dos usuários
     Get Text    css=td >> text=${NAME_CREATED}

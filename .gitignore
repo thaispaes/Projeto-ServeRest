@@ -2,3 +2,4 @@ robot/
 reports/
 .vscode/
 robot.toml
+users.json

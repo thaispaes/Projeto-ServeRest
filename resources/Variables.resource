@@ -13,13 +13,28 @@ ${FAKE_NAME}
 ${FAKE_EMAIL}
 ${FAKE_PASS}
 ${ADMIN_FLAG}
+
+${NAME}
+${EMAIL}
+${PASS}
+${ADMIN}
+
+${NAME_SAVED}
+${EMAIL_SAVED}
+${PASS_SAVED}
+${ADMIN_SAVED}
+
 ${JSON_FILE}    users.json
 
 ## Admin Validations
 ${IS_NOT_ADMIN}    False
 ${IS_ADMIN}    True
+${ADMIN_EMAIL}    
+${ADMIN_NAME}    
+${ADMIN_PASS}
 
 ## Product Control File
+${PRODUCT}
 ${PRODUCT_NAME}    JBL Sem Fio
 ${PRICE}    224
 ${DESCRIPTION}    JBL Fone de Ouvido sem Fio Tune 520BT Dobrável Bateria 57h

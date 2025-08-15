@@ -1,1 +1,4 @@
-*.txt
+robot/
+reports/
+.vscode/
+robot.toml

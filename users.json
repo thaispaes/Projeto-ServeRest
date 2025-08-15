@@ -1,38 +1,15 @@
 [
+  
     {
-        "name": "Timothy Riley",
-        "email": "krobinson@example.net",
-        "password": "ZGH%Zfdw$6",
+        "name": "Brandon Sparks",
+        "email": "andrew91@example.com",
+        "password": "^#23@2Sycf",
         "admin": true
     },
     {
-        "name": "Heather Medina",
-        "email": "avillanueva@example.com",
-        "password": "oHbSN7uw(5",
-        "admin": false
-    },
-    {
-        "name": "Thomas Zavala",
-        "email": "lsherman@example.org",
-        "password": "PDh4SZjvi+",
-        "admin": false
-    },
-    {
-        "name": "Kimberly Brooks",
-        "email": "gentrymaria@example.net",
-        "password": "BZZiQ7qn+1",
-        "admin": false
-    },
-    {
-        "name": "Albert Camacho",
-        "email": "zjones@example.net",
-        "password": "&$N^jGk85P",
-        "admin": true
-    },
-    {
-        "name": "Patricia Garner",
-        "email": "uhernandez@example.net",
-        "password": "+!74V4pvly",
+        "name": "Eric Carey",
+        "email": "ayalakimberly@example.com",
+        "password": "2iRaGrSa@+",
         "admin": true
     }
 ]
